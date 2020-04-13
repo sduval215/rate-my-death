@@ -22,7 +22,7 @@ const Video = ({ id }) => (
   <div className={styles.videoWrapper}>
     <div className={styles.overlay} />
     <div className={styles.videoContainer}>
-      <Youtube videoId={id} opts={opts}/>
+      {/* <Youtube videoId={id} opts={opts}/> */}
     </div>
   </div>
 )

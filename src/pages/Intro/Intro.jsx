@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
 // ROUTING
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // COMPONENTS
 import Video from '../../components/Video/Video';
 
 import styles from './Intro.module.scss';
+
+const icon = require('./imgs/icon.svg');
 
 class Intro extends Component {
   constructor(props){
@@ -19,7 +21,15 @@ class Intro extends Component {
       <div className={styles.pageWrapper}>
         <div className={styles.pageContainer}>
           <div className={styles.introContainer}>
-            <h1>Rate my death</h1>
+            <img alt="icon" src={icon} />
+            <h1>RateMyDeath.org</h1>
+            <p>
+              While Trump brags about his press conference ratings,
+              thousands of Americans are dying. So exactly how much is a humanlife worth to Trump?
+            </p>
+            <Link to="/home">
+              Let's Find Out
+            </Link>
             {/* <Link to="/home">Home</Link> */}
           </div>
           <Video id={'BjNuiJXEw00'} />
