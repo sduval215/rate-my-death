@@ -1,0 +1,37 @@
+.videoWrapper {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1,
+}
+
+.videoWrapper {
+  .videoContainer {
+    > div {
+      position: relative;
+      height: 1500px;
+      width: 1900px;
+      top: -250px;
+      left: -150px;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  z-index: 50;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4)
+}
+
+@media (max-width: 500px) {
+  .videoWrapper {
+    .videoContainer {
+      > div {
+        left: -700px;
+      }
+    }
+  }
+}
