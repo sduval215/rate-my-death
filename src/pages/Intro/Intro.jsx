@@ -20,6 +20,7 @@ class Intro extends Component {
     return(
       <div className={styles.pageWrapper}>
         <div className={styles.pageContainer}>
+          <Video id={'BjNuiJXEw00'} />
           <div className={styles.introContainer}>
             <img alt="icon" src={icon} />
             <h1>RateMyDeath.org</h1>
@@ -30,9 +31,7 @@ class Intro extends Component {
             <Link to="/home">
               Let's Find Out
             </Link>
-            {/* <Link to="/home">Home</Link> */}
           </div>
-          <Video id={'BjNuiJXEw00'} />
         </div>
       </div>
     )
