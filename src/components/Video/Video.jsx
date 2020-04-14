@@ -18,24 +18,26 @@ const opts = {
   }
 }
 
-const Video = ({ id }) => (
-  <div className={styles.videoWrapper}>
-    <div className={styles.overlay} />
-    <div className={styles.videoContainer}>
-      {/* <Youtube onReady={e => {
-        e.target.playVideo();
-        e.target.setVolume(0);
-      }} videoId={'BjNuiJXEw00'} opts={opts}/> */}
-      <video
-          autoPlay
-          muted
-          playsInline
-          loop
-        >
-          <source src={require('./video.mp4')} type='video/mp4' />
-        </video>
+const Video = ({ id }) => {
+  const video = require(`./videos/${id}.mp4`)
+  console.log(video);
+  return(
+    <div className={styles.videoWrapper}>
+      <div className={styles.overlay} />
+      <div className={styles.videoContainer}>
+        <video
+            autoPlay
+            muted
+            playsInline
+            loop
+            key={video}
+            onChange={() => console.log('change')}
+          >
+            <source src={video} type='video/webm' />
+          </video>
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default Video;
