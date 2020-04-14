@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Swiper from 'react-id-swiper';
+
 // COMPONENTS
 import Video from '../../components/Video/Video';
 
@@ -29,28 +31,56 @@ const calendarObject = [
 class Home extends Component {
   constructor(props){
     super(props);
-    this.state = {}
+    this.state = {
+      videoIndex: 1
+    }
   }
 
-  renderCalendar = () => (
-    <div className={styles.calendarContainer}>
-      {calendarObject.map(({month, day, deaths, views}) => (
-        <div className={styles.calendar}>
-          <p>{deaths}</p>
-          <p>{views}</p>
-        </div>
-      ))}
-    </div>
-  )
+  /**
+   * Sets swiper listener logic
+   * @param {Class} swiper
+   */
+  setSwiperListener = (swiper) => {
+    if(swiper !== null) {
+      swiper.on('slideChange', () => {
+        this.setState({ videoIndex: swiper.activeIndex + 1 })
+        console.log('SLIDE CHANGED');
+      })
+    }
+  }
 
   render() {
+    const { videoIndex } = this.state;
+    console.log(videoIndex);
     return(
       <div className={styles.pageWrapper}>
         <div className={styles.pageContainer}>
-          <div className={styles.calendarContainer}>
-            <Video />
-            <div className={styles.calendarWrapper}>
-              {this.renderCalendar()}
+          <div className={styles.calendarWrapper}>
+            <Video id={videoIndex} />
+            <div className={styles.calendarContainer}>
+              <Swiper
+                getSwiper={this.setSwiperListener}
+                allowTouchMove
+                freeMode
+                freeModeSticky
+                slideNextClass={styles.adjacentSlide}
+                slidePrevClass={styles.adjacentSlide}
+                slideActiveClass={styles.activeSlide}
+                wrapperClass={styles.swiperContainer}
+              >
+                <div className={styles.calendar}>
+                  <div className={styles.dateContainer}>
+                    <h1>11</h1>
+                    <h3>April</h3>
+                  </div>
+                </div>
+                <div className={styles.calendar}>
+                  <div className={styles.dateContainer}>
+                    <h1>12</h1>
+                    <h3>April</h3>
+                  </div>
+                </div>
+              </Swiper>
             </div>
           </div>
         </div>
