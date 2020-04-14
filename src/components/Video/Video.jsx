@@ -22,10 +22,18 @@ const Video = ({ id }) => (
   <div className={styles.videoWrapper}>
     <div className={styles.overlay} />
     <div className={styles.videoContainer}>
-      <Youtube onReady={e => {
+      {/* <Youtube onReady={e => {
         e.target.playVideo();
         e.target.setVolume(0);
-      }} videoId={'BjNuiJXEw00'} opts={opts}/>
+      }} videoId={'BjNuiJXEw00'} opts={opts}/> */}
+      <video
+          autoPlay
+          muted
+          playsInline
+          loop
+        >
+          <source src={require('./video.mp4')} type='video/mp4' />
+        </video>
     </div>
   </div>
 )

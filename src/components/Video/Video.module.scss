@@ -7,6 +7,16 @@
   z-index: 1,
 }
 
+video {
+  z-index: 1;
+  opacity: 0.4;
+  position: absolute;
+      height: 1500px;
+      width: 1900px;
+      top: -250px;
+      left: -150px;
+}
+
 .videoWrapper {
   .videoContainer {
     > div {
@@ -20,18 +30,21 @@
 }
 
 .overlay {
-  z-index: 50;
+  z-index: 10000;
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.4)
+  background-color: rgba(0,0,0,0.9)
 }
 
 @media (max-width: 500px) {
-  .videoWrapper {
-    .videoContainer {
-      > div {
-        left: -700px;
-      }
-    }
+  // .videoWrapper {
+  //   .videoContainer {
+  //     > div {
+  //       left: -700px;
+  //     }
+  //   }
+  // }
+  video {
+    left: -700px;
   }
 }
