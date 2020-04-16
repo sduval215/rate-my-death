@@ -56,7 +56,6 @@ class Home extends Component {
       <div className={styles.pageWrapper}>
         <div className={styles.pageContainer}>
           <div className={styles.calendarWrapper}>
-            <Video id={videoIndex} />
             <div className={styles.calendarContainer}>
               <Swiper
                 getSwiper={this.setSwiperListener}
@@ -73,12 +72,21 @@ class Home extends Component {
                     <h1>11</h1>
                     <h3>April</h3>
                   </div>
+                  <Video id={videoIndex} />
                 </div>
                 <div className={styles.calendar}>
                   <div className={styles.dateContainer}>
                     <h1>12</h1>
                     <h3>April</h3>
                   </div>
+                  <Video id={videoIndex} />
+                </div>
+                <div className={styles.calendar}>
+                  <div className={styles.dateContainer}>
+                    <h1>13</h1>
+                    <h3>April</h3>
+                  </div>
+                  <Video id={videoIndex} />
                 </div>
               </Swiper>
             </div>

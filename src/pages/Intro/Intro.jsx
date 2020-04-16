@@ -25,8 +25,11 @@ class Intro extends Component {
             <img alt="icon" src={icon} />
             <h1>RateMyDeath.org</h1>
             <p>
-              While Trump brags about his press conference ratings,
-              thousands of Americans are dying. So exactly how much is a humanlife worth to Trump?
+              While president Trump brags about his press conference ratings <br/>
+              thousands of Americans are dying.
+            </p>
+            <p>
+              So exactly how much is a human life worth to Trump?
             </p>
             <Link to="/home">
               Let's Find Out
