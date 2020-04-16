@@ -31,10 +31,12 @@ class Home extends Component {
    */
   setSwiperListener = (swiper) => {
     if(swiper !== null) {
-      // swiper.on('slideChange', () => {
-      //   this.setState({ videoIndex: swiper.activeIndex + 1 })
-      //   console.log('SLIDE CHANGED');
-      // })
+      swiper.on('sliderMove', () => {
+        this.setState({ dragging: true });
+      });
+      swiper.on('touchEnd', () => {
+        this.setState({ dragging: false });
+      })
     }
   }
   
@@ -91,7 +93,7 @@ class Home extends Component {
   }
 
   render() {
-    const { videoIndex } = this.state;
+    const { videoIndex, dragging } = this.state;
     return(
       <div className={styles.pageWrapper}>
         <div className={styles.pageContainer}>
@@ -100,8 +102,7 @@ class Home extends Component {
               <Swiper
                 getSwiper={this.setSwiperListener}
                 allowTouchMove
-                freeMode
-                freeModeSticky
+                slide
                 initialSlide={slideData.length - 1}
                 // slideNextClass={styles.nextSlide}
                 // slidePrevClass={styles.prevSlide}
@@ -112,7 +113,11 @@ class Home extends Component {
                   // RENDER INDEX SLIDE ON FIRST INDEX
                   if (index === 0) return this.renderIndexSlide();
                   return(
-                    <div className={styles.calendar}>
+                    <div className={[
+                      styles.calendar,
+                      dragging ? styles.dragging : null
+                    ].join(' ')}
+                    >
                       {this.renderSlide(data)}
                       <Video id={videoIndex} />
                     </div>
