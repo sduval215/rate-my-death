@@ -73,22 +73,14 @@ class Home extends Component {
     </div>
   )
 
-<<<<<<< HEAD
   renderResourceItem = (icon, label, route) => (
-=======
-  renderResourceItem = (icon, label, link) => (
->>>>>>> 27e5b98f0bab0dd6e843ddf9982a8779bbb15dbb
     <div className={styles.listItem}>
       <div className={styles.icon}>
         <img alt="resource" src={icon}/>
       </div>
       <div className={styles.link}>
         <p>{label}</p>
-<<<<<<< HEAD
         <a href={route}>
-=======
-        <a href={link}>
->>>>>>> 27e5b98f0bab0dd6e843ddf9982a8779bbb15dbb
           <img alt="link" src={link} />
         </a>
       </div>
@@ -197,21 +189,12 @@ class Home extends Component {
           <div className={styles.resourcesContainer}>
             <h3>If you'd like to help, please consider the following:</h3>
             <div className={styles.listContainer}>
-<<<<<<< HEAD
               {this.renderResourceItem(resource, 'Donate Personal Protective Equipment (PPE)')}
               {this.renderResourceItem(resource, 'Make your own PPE')}
               {this.renderResourceItem(resource, 'Send Food to a Hospital')}
               {this.renderResourceItem(resource, 'Donate Blood or Money to the Red Cross')}
               {this.renderResourceItem(resource, 'Save the Postal Service')}
               {this.renderResourceItem(resource, 'Support local businesses')}
-=======
-              {this.renderResourceItem(ppe, 'Donate Personal Protective Equipment (PPE)')}
-              {this.renderResourceItem(customPPE, 'Make your own PPE')}
-              {this.renderResourceItem(hospital, 'Send Food to a Hospital')}
-              {this.renderResourceItem(blood, 'Donate Blood or Money to the Red Cross')}
-              {this.renderResourceItem(mail, 'Save the Postal Service')}
-              {this.renderResourceItem(business, 'Support local businesses')}
->>>>>>> 27e5b98f0bab0dd6e843ddf9982a8779bbb15dbb
             </div>
           </div>
           {/* CTA */}
