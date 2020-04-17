@@ -31,7 +31,6 @@ const Video = ({ id }) => {
             playsInline
             loop
             key={video}
-            onChange={() => console.log('change')}
           >
             <source src={video} type='video/webm' />
           </video>

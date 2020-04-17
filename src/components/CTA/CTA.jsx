@@ -6,9 +6,11 @@ const CTA = () => (
   <div className={styles.CTAContainer}>
     <div>
       <h2>This should go without saying, please vote in November.</h2>
-      <button>
-        REGISTER TO VOTE
-      </button>
+      <a target="__blank" href="https://www.usa.gov/register-to-vote">
+        <button>
+          REGISTER TO VOTE
+        </button>
+      </a>
     </div>
   </div>
 )
