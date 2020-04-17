@@ -73,14 +73,14 @@ class Home extends Component {
     </div>
   )
 
-  renderResourceItem = (icon, label, link) => (
+  renderResourceItem = (icon, label, route) => (
     <div className={styles.listItem}>
       <div className={styles.icon}>
         <img alt="resource" src={icon}/>
       </div>
       <div className={styles.link}>
         <p>{label}</p>
-        <a href={link}>
+        <a href={route}>
           <img alt="link" src={link} />
         </a>
       </div>
@@ -121,10 +121,12 @@ class Home extends Component {
         <div className={styles.pageContainer}>
           <div className={styles.calendarWrapper}>
             <div className={styles.calendarContainer}>
+              <img className={styles.mobileHeader} alt="icon" src={icon} /> 
               <Swiper
                 getSwiper={this.setSwiperListener}
                 allowTouchMove
                 slide
+                keyboard
                 initialSlide={slideData.length - 1}
                 // slideNextClass={styles.nextSlide}
                 // slidePrevClass={styles.prevSlide}
@@ -187,12 +189,12 @@ class Home extends Component {
           <div className={styles.resourcesContainer}>
             <h3>If you'd like to help, please consider the following:</h3>
             <div className={styles.listContainer}>
-              {this.renderResourceItem(ppe, 'Donate Personal Protective Equipment (PPE)')}
-              {this.renderResourceItem(customPPE, 'Make your own PPE')}
-              {this.renderResourceItem(hospital, 'Send Food to a Hospital')}
-              {this.renderResourceItem(blood, 'Donate Blood or Money to the Red Cross')}
-              {this.renderResourceItem(mail, 'Save the Postal Service')}
-              {this.renderResourceItem(business, 'Support local businesses')}
+              {this.renderResourceItem(resource, 'Donate Personal Protective Equipment (PPE)')}
+              {this.renderResourceItem(resource, 'Make your own PPE')}
+              {this.renderResourceItem(resource, 'Send Food to a Hospital')}
+              {this.renderResourceItem(resource, 'Donate Blood or Money to the Red Cross')}
+              {this.renderResourceItem(resource, 'Save the Postal Service')}
+              {this.renderResourceItem(resource, 'Support local businesses')}
             </div>
           </div>
           {/* CTA */}

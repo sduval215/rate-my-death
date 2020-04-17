@@ -31,6 +31,12 @@
   box-sizing: border-box; 
 }
 
+.mobileHeader {
+  height: 25px;
+  margin: 10px auto 25px;
+  display: none;
+}
+
 /* INDEX CALENDAR STYLES */
 
 .indexCalendar {
@@ -344,8 +350,9 @@
           font-size: 18px;
           line-height: 20px;
           color: #000000;
-
-
+        }
+        a {
+          cursor: pointer;
         }
       }
     }
@@ -398,11 +405,96 @@
 @media (max-width: 800px) {
   .contentWidth {
     width: 80%;
-  }
+  } 
 }
 
 @media (max-width: 600px) {
   .contentWidth {
     width: 95%;
   }
+  .calendar {
+    border: 2px solid #FFFFFF;
+  }
+  .mobileHeader {
+    display: block;
+  }
+  .calendarContent {
+    .header {
+      img {
+        opacity: 0;
+      }
+      div {
+        border: 2px solid #FFFFFF;
+        box-sizing: border-box;
+        padding: 10px 20px;
+        position: relative;
+        top: -5px;
+        left: 5px;
+        font-weight: 500;
+        font-family: 'Druk Wide Regular';
+        text-align: center;
+        p {
+          font-size: 18px;
+          line-height: 34px;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
+        }
+        h2 {
+          margin-top: -10px;
+          font-size: 36px;
+          line-height: 45px;
+        }
+      }
+    }
+    .body {
+      p {
+        width: 90%;
+        font-size: 20px;
+        line-height: 22px;
+      }
+    }
+    .footer {
+      p {
+        font-size: 16px;
+        line-height: 18px;
+      }
+      p:first-of-type {
+        margin-top: 15px;
+      }
+      p:last-of-type {
+        margin-bottom: 15px;
+      }
+      h3 {
+        font-size: 32px;
+        line-height: 63px;
+        margin: 0;
+      }
+    }
+  }
+  // RESOURCES STYLES 
+.resourcesContainer {
+  h3 {
+  }
+  .listContainer {
+    background-color: #FFF;
+    margin: 0 auto;
+    margin-top: 35px;
+    .listItem {
+      border-bottom: 1px solid #E95656;
+      .icon {
+        img {
+          height: 30px;
+        }
+      }
+      .link {
+        p {
+          font-size: 14px;
+        }
+        img {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
 }
