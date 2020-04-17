@@ -62,7 +62,7 @@
       font-family: 'Graphik Regular';
       font-size: 32px;
       line-height: 42px;
-      width: 80%;
+      width: 70%;
       margin: 0 auto;
       a {
         font-family: 'Graphik Medium';
@@ -119,6 +119,7 @@
   z-index: 99999999;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
   @extend .flex;
   flex-direction: column;
   .header {
@@ -156,7 +157,7 @@
       font-family: 'Graphik Regular';
       font-size: 32px;
       line-height: 42px;
-      width: 80%;
+      width: 70%;
       margin: 0 auto;
       a {
         cursor: pointer;
@@ -276,11 +277,22 @@
       line-height: 28px;
       color: rgba(0, 0, 0, 0.65);
       margin: 25px 0;
+      span {
+        font-size: 10px;
+        margin-right: 5px;
+        margin-left: -3px;
+        position: relative;
+        top: -10px;
+      }
     }
     .citationsContainer {
       border-top: 1px solid #EBEBEB;
-      padding-top: 10px;
-      p {
+      padding-top: 37px;
+      a {
+        cursor: pointer;
+        display: block;
+        text-decoration: underline;
+        margin-bottom: 10px;
         font-family: 'Graphik Regular';
         font-size: 14px;
         line-height: 15px;
@@ -317,6 +329,9 @@
         justify-content: center;
         border-right: 1px solid #E95656;
         width: 10%;
+        img {
+          height: 30px;
+        }
       }
       .link {
         @extend .flex;
