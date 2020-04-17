@@ -29,13 +29,13 @@ const Statement = () => (
       There’s blood on President Trump’s hands.
       </p>
       <div className={styles.citationsContainer}>
-        <a>1. "Trade Advisor Warned White House in January..." - NYT</a>
-        <a>2. "Did the Trump Administration Fire the US Pandemic response Team?" - Snopes</a>
-        <a>3. "Trump team failed to folllow NSC's pandemic playbook" - Politico</a>
-        <a>4. "US slashed CDC staff inside China prior to cronavirus outbreak" - Reuters</a>
-        <a>5. Video Source - Twitter</a>
-        <a>6. "Trump halts funding to World Health Organization" - Politico </a>
-        <a>7. "Trump touts unproven drug..." - Independent</a>
+        <a target="__blank" href="https://www.nytimes.com/2020/04/06/us/politics/navarro-warning-trump-coronavirus.html">1. "Trade Advisor Warned White House in January..." - NYT</a>
+        <a target="__blank" href="https://www.snopes.com/fact-check/trump-fire-pandemic-team/">2. "Did the Trump Administration Fire the US Pandemic response Team?" - Snopes</a>
+        <a target="__blank" href="https://www.politico.com/news/2020/03/25/trump-coronavirus-national-security-council-149285">3. "Trump team failed to folllow NSC's pandemic playbook" - Politico</a>
+        <a target="__blank" href="https://www.reuters.com/article/us-health-coronavirus-china-cdc-exclusiv/exclusive-u-s-slashed-cdc-staff-inside-china-prior-to-coronavirus-outbreak-idUSKBN21C3N5">4. "US slashed CDC staff inside China prior to cronavirus outbreak" - Reuters</a>
+        <a target="__blank" href="https://twitter.com/BillKristol/status/1240053696597233667?s=20">5. Video Source - Twitter</a>
+        <a target="__blank" href="https://www.politico.com/news/2020/04/14/trump-world-health-organization-funding-186786">6. "Trump halts funding to World Health Organization" - Politico </a>
+        <a target="__blank" href="https://www.independent.co.uk/news/world/americas/us-politics/trump-coronavirus-drug-deaths-hydroxychloroquine-highways-briefing-a9449486.html">7. "Trump touts unproven drug..." - Independent</a>
       </div>
     </div>
   </div>
