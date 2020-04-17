@@ -17,6 +17,14 @@ const link = require('./imgs/link.svg');
 const country = require('./imgs/country.svg');
 const twitterIcon = require('../../static/imgs/twitter-icon.svg');
 
+// RESOURCE ASSETS
+const ppe = require('./imgs/resources/ppe-icon.svg');
+const customPPE = require('./imgs/resources/custom-ppe-icon.svg');
+const hospital = require('./imgs/resources/hospital-icon.svg');
+const blood = require('./imgs/resources/blood-icon.svg');
+const mail = require('./imgs/resources/mail-icon.svg');
+const business = require('./imgs/resources/business-icon.svg');
+
 class Home extends Component {
   constructor(props){
     super(props);
@@ -54,13 +62,27 @@ class Home extends Component {
       </div>
       <div className={styles.indexFooter}>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
-          Ut eros urna, sollicitudin quis ornare vel, ultrices sit amet urna.
+          RateMyDeath.org uses simple math: the number of viewers divided by the number of deaths. <br />
+          Let's show Trump the human cost of his precious ratings.
         </p>
         <button type="button">
           <img alt="twitter" src={twitterIcon}/>
-          TWEET @ TRUMP
+          SHARE THIS SITE
         </button>
+      </div>
+    </div>
+  )
+
+  renderResourceItem = (icon, label, link) => (
+    <div className={styles.listItem}>
+      <div className={styles.icon}>
+        <img alt="resource" src={icon}/>
+      </div>
+      <div className={styles.link}>
+        <p>{label}</p>
+        <a href={link}>
+          <img alt="link" src={link} />
+        </a>
       </div>
     </div>
   )
@@ -80,7 +102,7 @@ class Home extends Component {
           <p dangerouslySetInnerHTML={{__html: body}}/>
         </div>
         <div className={styles.footer}>
-          <p>Today, one human life was worth</p>
+          <p>If you died today, your life was worth</p>
           <h3>{`${viewers} viewers`}</h3>
           <p>to President Trump</p>
           <button type="button">
@@ -132,30 +154,32 @@ class Home extends Component {
               <img alt="country" src={country} />
               <div>
                 <p>US COVID-19 DEATHS</p>
-                <h3>27,549</h3>
+                <h3>34,934</h3>
               </div>
             </div>
             <div className={styles.copyContainer}>
               <h4>Just a reminder that it didn't need to be like this.</h4>
               <p>
-                A reminder that we didn't need to sacrifice tens of thousands of American lives
-                to this "pandemic no one saw coming." And a reminder that there's documented evidence
-                that Trump knew about this now massive pandemic as early as January XX [sources].
+                A reminder that we didn’t need to sacrifice tens of thousands of American lives to this "pandemic no one saw coming." 
+                And a reminder that there’s documented evidence that Trump knew about how deadly this pandemic would be as early as January 29th. <span>1</span>
               </p>
               <p>
-                Inaction is one thing, but Trump also dissolved the Directorate for Global Health
-                Security/pandemic response team in 2018, willfully ignored the pandemic response playbook,
-                fired the CDC expert in China, haphazardly downplayed the severity of the pandemic for
-                weeks, is making states bid against the federal government for critical medical supplies,
-                and is using his press conferences to tout scientifically unproven and potentially dangerous drugs as "cures"
-                for the Coronavirus.
+              Inaction is one thing, but Trump also fired the US Pandemic Response Team in 2018, <span>2</span> willfully ignored the NSC’s pandemic response playbook, <span>3</span> 
+              fired CDC experts in China,<span>4</span> haphazardly downplayed the severity of the pandemic for weeks,<span>5</span> is cutting funding to the World Health Organization, <span>6</span>
+              and is using his press conferences to tout scientifically unproven and potentially dangerous drugs as treatments for the Coronavirus.<span>7</span>
               </p>
               <p>
-                This is a president who cares more about his TV ratings, his stocks, andd his properties than
-                human lives. There's blood on President Trump's hands.
+              This is a president who cares more about his TV ratings, his stocks, and his reputation than human lives.
+              There’s blood on President Trump’s hands.
               </p>
               <div className={styles.citationsContainer}>
-                <p>1. Citation</p>
+                <a>1. "Trade Advisor Warned White House in January..." - NYT</a>
+                <a>2. "Did the Trump Administration Fire the US Pandemic response Team?" - Snopes</a>
+                <a>3. "Trump team failed to folllow NSC's pandemic playbook" - Politico</a>
+                <a>4. "US slashed CDC staff inside China prior to cronavirus outbreak" - Reuters</a>
+                <a>5. Video Source - Twitter</a>
+                <a>6. "Trump halts funding to World Health Organization" - Politico </a>
+                <a>7. "Trump touts unproven drug..." - Independent</a>
               </div>
             </div>
           </div>
@@ -163,42 +187,12 @@ class Home extends Component {
           <div className={styles.resourcesContainer}>
             <h3>If you'd like to help, please consider the following:</h3>
             <div className={styles.listContainer}>
-              <div className={styles.listItem}>
-                <div className={styles.icon}>
-                  <img alt="resource" src={resource}/>
-                </div>
-                <div className={styles.link}>
-                  <p>Donate Personal Protective Equipment (PPE) </p>
-                  <img alt="link" src={link} />
-                </div>
-              </div>
-              <div className={styles.listItem}>
-                <div className={styles.icon}>
-                  <img alt="resource" src={resource}/>
-                </div>
-                <div className={styles.link}>
-                  <p>Donate Personal Protective Equipment (PPE) </p>
-                  <img alt="link" src={link} />
-                </div>
-              </div>
-              <div className={styles.listItem}>
-                <div className={styles.icon}>
-                  <img alt="resource" src={resource}/>
-                </div>
-                <div className={styles.link}>
-                  <p>Donate Personal Protective Equipment (PPE) </p>
-                  <img alt="link" src={link} />
-                </div>
-              </div>
-              <div className={styles.listItem}>
-                <div className={styles.icon}>
-                  <img alt="resource" src={resource}/>
-                </div>
-                <div className={styles.link}>
-                  <p>Donate Personal Protective Equipment (PPE) </p>
-                  <img alt="link" src={link} />
-                </div>
-              </div>
+              {this.renderResourceItem(ppe, 'Donate Personal Protective Equipment (PPE)')}
+              {this.renderResourceItem(customPPE, 'Make your own PPE')}
+              {this.renderResourceItem(hospital, 'Send Food to a Hospital')}
+              {this.renderResourceItem(blood, 'Donate Blood or Money to the Red Cross')}
+              {this.renderResourceItem(mail, 'Save the Postal Service')}
+              {this.renderResourceItem(business, 'Support local businesses')}
             </div>
           </div>
           {/* CTA */}
