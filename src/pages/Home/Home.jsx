@@ -5,6 +5,12 @@ import Swiper from 'react-id-swiper';
 // COMPONENTS
 import Video from '../../components/Video/Video';
 
+
+// SUB UI COMPONENTS
+import Statement from '../../components/Statement/Statement';
+import Resources from '../../components/Resources/Resources';
+import CTA from '../../components/CTA/CTA';
+
 // STATIC DATA
 import { slideData } from './data';
 
@@ -12,18 +18,7 @@ import styles from './Home.module.scss';
 
 const indexIcon = require('./imgs/index-icon.svg');
 const icon = require('./imgs/icon.svg');
-const resource = require('./imgs/resource.svg');
-const link = require('./imgs/link.svg');
-const country = require('./imgs/country.svg');
 const twitterIcon = require('../../static/imgs/twitter-icon.svg');
-
-// RESOURCE ASSETS
-const ppe = require('./imgs/resources/ppe-icon.svg');
-const customPPE = require('./imgs/resources/custom-ppe-icon.svg');
-const hospital = require('./imgs/resources/hospital-icon.svg');
-const blood = require('./imgs/resources/blood-icon.svg');
-const mail = require('./imgs/resources/mail-icon.svg');
-const business = require('./imgs/resources/business-icon.svg');
 
 class Home extends Component {
   constructor(props){
@@ -69,20 +64,6 @@ class Home extends Component {
           <img alt="twitter" src={twitterIcon}/>
           SHARE THIS SITE
         </button>
-      </div>
-    </div>
-  )
-
-  renderResourceItem = (icon, label, route) => (
-    <div className={styles.listItem}>
-      <div className={styles.icon}>
-        <img alt="resource" src={icon}/>
-      </div>
-      <div className={styles.link}>
-        <p>{label}</p>
-        <a href={route}>
-          <img alt="link" src={link} />
-        </a>
       </div>
     </div>
   )
@@ -151,61 +132,11 @@ class Home extends Component {
             </div>
           </div>
           {/* STATEMENT */}
-          <div className={styles.statementContainer}>
-            <div className={styles.heroContainer}>
-              <img alt="country" src={country} />
-              <div>
-                <p>US COVID-19 DEATHS</p>
-                <h3>34,934</h3>
-              </div>
-            </div>
-            <div className={styles.copyContainer}>
-              <h4>Just a reminder that it didn't need to be like this.</h4>
-              <p>
-                A reminder that we didn’t need to sacrifice tens of thousands of American lives to this "pandemic no one saw coming." 
-                And a reminder that there’s documented evidence that Trump knew about how deadly this pandemic would be as early as January 29th. <span>1</span>
-              </p>
-              <p>
-              Inaction is one thing, but Trump also fired the US Pandemic Response Team in 2018, <span>2</span> willfully ignored the NSC’s pandemic response playbook, <span>3</span> 
-              fired CDC experts in China,<span>4</span> haphazardly downplayed the severity of the pandemic for weeks,<span>5</span> is cutting funding to the World Health Organization, <span>6</span>
-              and is using his press conferences to tout scientifically unproven and potentially dangerous drugs as treatments for the Coronavirus.<span>7</span>
-              </p>
-              <p>
-              This is a president who cares more about his TV ratings, his stocks, and his reputation than human lives.
-              There’s blood on President Trump’s hands.
-              </p>
-              <div className={styles.citationsContainer}>
-                <a>1. "Trade Advisor Warned White House in January..." - NYT</a>
-                <a>2. "Did the Trump Administration Fire the US Pandemic response Team?" - Snopes</a>
-                <a>3. "Trump team failed to folllow NSC's pandemic playbook" - Politico</a>
-                <a>4. "US slashed CDC staff inside China prior to cronavirus outbreak" - Reuters</a>
-                <a>5. Video Source - Twitter</a>
-                <a>6. "Trump halts funding to World Health Organization" - Politico </a>
-                <a>7. "Trump touts unproven drug..." - Independent</a>
-              </div>
-            </div>
-          </div>
+          <Statement />
           {/* RESOURCES */}
-          <div className={styles.resourcesContainer}>
-            <h3>If you'd like to help, please consider the following:</h3>
-            <div className={styles.listContainer}>
-              {this.renderResourceItem(resource, 'Donate Personal Protective Equipment (PPE)')}
-              {this.renderResourceItem(resource, 'Make your own PPE')}
-              {this.renderResourceItem(resource, 'Send Food to a Hospital')}
-              {this.renderResourceItem(resource, 'Donate Blood or Money to the Red Cross')}
-              {this.renderResourceItem(resource, 'Save the Postal Service')}
-              {this.renderResourceItem(resource, 'Support local businesses')}
-            </div>
-          </div>
+          <Resources />
           {/* CTA */}
-          <div className={styles.CTAContainer}>
-            <div>
-              <h2>This should go without saying, please vote in November.</h2>
-              <button>
-                REGISTER TO VOTE
-              </button>
-            </div>
-          </div>
+          <CTA />
         </div>
       </div>
     )

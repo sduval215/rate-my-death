@@ -1,0 +1,56 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contentWidth {
+  width: 60%;
+}
+
+.CTAContainer {
+  padding: 80px 0;
+  background-color: #000;
+  div {
+    @extend .contentWidth;
+    margin: 0 auto;
+    h2 {
+      font-family: 'Druk Wide Regular';
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 26px;
+      text-align: center;
+      color: #FFFFFF
+    }
+    button {
+      display: block;
+      margin: 35px auto;
+      background-color: #E95656;
+      padding: 16px 25px;
+      border-radius: 25px;
+      font-family: 'Druk Wide Regular';
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.04em;
+      color: #FFFFFF;
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .contentWidth {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .contentWidth {
+    width: 75%;
+  }
+}
+
+@media (max-width: 800px) {
+  .contentWidth {
+    width: 90%;
+  } 
+}
