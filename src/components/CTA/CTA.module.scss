@@ -21,18 +21,21 @@
       text-align: center;
       color: #FFFFFF
     }
-    button {
-      display: block;
-      margin: 35px auto;
-      background-color: #E95656;
-      padding: 16px 25px;
-      border-radius: 25px;
-      font-family: 'Druk Wide Regular';
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 18px;
-      letter-spacing: 0.04em;
-      color: #FFFFFF;
+    a {
+      text-decoration: none;
+      button {
+        display: block;
+        margin: 35px auto;
+        background-color: #E95656;
+        padding: 16px 25px;
+        border-radius: 25px;
+        font-family: 'Druk Wide Regular';
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.04em;
+        color: #FFFFFF;
+      }
     }
   }
 }
