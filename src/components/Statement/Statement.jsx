@@ -14,7 +14,7 @@ const Statement = () => (
       </div>
     </div>
     <div className={styles.copyContainer}>
-      <h4>Just a reminder that it didn't need to be like this.</h4>
+      <h4>It didn't have to be like this.</h4>
       <p>
         A reminder that we didn’t need to sacrifice tens of thousands of American lives to this "pandemic no one saw coming." 
         And a reminder that there’s documented evidence that Trump knew about how deadly this pandemic would be as early as January 29th. <span>1</span>

@@ -1,11 +1,4 @@
-.flex {
-  display: flex;
-  justify-content: space-between;
-}
-
-.contentWidth {
-  width: 60%;
-}
+@import "../../App.scss";
 
 .CTAContainer {
   padding: 80px 0;
@@ -38,22 +31,4 @@
       }
     }
   }
-}
-
-@media (max-width: 1150px) {
-  .contentWidth {
-    width: 70%;
-  }
-}
-
-@media (max-width: 1000px) {
-  .contentWidth {
-    width: 75%;
-  }
-}
-
-@media (max-width: 800px) {
-  .contentWidth {
-    width: 90%;
-  } 
 }

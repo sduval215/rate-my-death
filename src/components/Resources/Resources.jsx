@@ -2,12 +2,15 @@ import React from 'react'
 
 import styles from './Resources.module.scss';
 
-const resource = require('./imgs/resource.svg');
 const link = require('./imgs/link.svg');
 
 // ASSETS
-const ppeIcon = require('./imgs/icons/ppe-icon.svg');
-const customPPEIcon = require('./imgs/icons/custom-ppe-icon.svg');
+const ppeIcon = require('./imgs/icons/ppe-icon.png');
+const customPPEIcon = require('./imgs/icons/custom-ppe-icon.png');
+const businessIcon = require('./imgs/icons/business-icon.png');
+const bloodIcon = require('./imgs/icons/blood-icon.png');
+const mailIcon = require('./imgs/icons/mail-icon.png');
+const hospitalIcon = require('./imgs/icons/hospital-icon.png');
 
 const renderResourceItem = (icon, label, route) => (
   <div className={styles.listItem}>
@@ -25,14 +28,18 @@ const renderResourceItem = (icon, label, route) => (
 
 const Resources = () => (
   <div className={styles.resourcesContainer}>
-    <h3>If you'd like to help, please consider the following:</h3>
+    <h3>
+      Feeling helpless?
+      <br />
+      Here are some ways you can help
+    </h3>
     <div className={styles.listContainer}>
       {renderResourceItem(ppeIcon, 'Donate Personal Protective Equipment (PPE)', 'https://thriveglobal.com/categories/first-responders-first/')}
       {renderResourceItem(customPPEIcon, 'Make your own PPE', 'https://www.youtube.com/watch?v=zm_NmpdgWWA')}
-      {renderResourceItem(resource, 'Send Food to a Hospital', 'https://www.gofundme.com/f/help-us-send-dinner-to-healthcare-heroes-in-nyc')}
-      {renderResourceItem(resource, 'Donate Blood or Money to the Red Cross', 'https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/coronavirus-safety.html')}
-      {renderResourceItem(resource, 'Save the Postal Service', 'https://store.usps.com/store/home')}
-      {renderResourceItem(resource, 'Support local businesses', '')}
+      {renderResourceItem(hospitalIcon, 'Send Food to a Hospital', 'https://www.gofundme.com/f/help-us-send-dinner-to-healthcare-heroes-in-nyc')}
+      {renderResourceItem(bloodIcon, 'Donate Blood or Money to the Red Cross', 'https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/coronavirus-safety.html')}
+      {renderResourceItem(mailIcon, 'Save the Postal Service', 'https://store.usps.com/store/home')}
+      {renderResourceItem(businessIcon, 'Support local businesses', '')}
     </div>
   </div>
 )
