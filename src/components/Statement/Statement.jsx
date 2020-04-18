@@ -16,17 +16,17 @@ const Statement = () => (
     <div className={styles.copyContainer}>
       <h4>It didn't have to be like this.</h4>
       <p>
-        A reminder that we didn’t need to sacrifice tens of thousands of American lives to this "pandemic no one saw coming." 
-        And a reminder that there’s documented evidence that Trump knew about how deadly this pandemic would be as early as January 29th. <span>1</span>
+        We didn’t have to sacrifice tens of thousands of American lives to this “pandemic no one saw coming.” Don’t let them tell you otherwise.
+        There’s documented evidence President Trump knew how deadly this pandemic would be as early as January 29th <span>1</span> and he still sat on his hands
+        for all of February. 
       </p>
       <p>
-      Inaction is one thing, but Trump also fired the US Pandemic Response Team in 2018, <span>2</span> willfully ignored the NSC’s pandemic response playbook, <span>3</span> 
-      fired CDC experts in China,<span>4</span> haphazardly downplayed the severity of the pandemic for weeks,<span>5</span> is cutting funding to the World Health Organization, <span>6</span>
-      and is using his press conferences to tout scientifically unproven and potentially dangerous drugs as treatments for the Coronavirus.<span>7</span>
+        Inaction is one thing, but Trump also fired the US Pandemic Response Team in 2018,<span>2</span> willfully ignored the NSC’s pandemic response playbook,<span>3</span>
+        fired CDC experts in China,<span>4</span> haphazardly downplayed the severity of the pandemic for weeks,<span>5</span> is cutting funding to the World Health Organization,<span>7</span>
+        and is using his press conferences to tout scientifically unproven and potentially dangerous drugs as treatments for the Coronavirus.<span>7</span>
       </p>
       <p>
-      This is a president who cares more about his TV ratings, his stocks, and his reputation than human lives.
-      There’s blood on President Trump’s hands.
+        This is a president who cares more about his TV ratings, his stocks, and his reputation than human lives. There’s blood on President Trump’s hands.
       </p>
       <div className={styles.citationsContainer}>
         <a target="__blank" href="https://www.nytimes.com/2020/04/06/us/politics/navarro-warning-trump-coronavirus.html">1. "Trade Advisor Warned White House in January..." - NYT</a>
