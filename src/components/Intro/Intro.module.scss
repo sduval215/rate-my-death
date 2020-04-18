@@ -1,8 +1,7 @@
 .pageWrapper {
   z-index: 5;
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  overflow: hidden;
 }
 
 .introContainer {
@@ -76,3 +75,10 @@
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  .introContainer {
+    h1 {
+      color: green !important;
+    }
+  }
+}

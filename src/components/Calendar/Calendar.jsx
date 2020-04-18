@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import Swiper from 'react-id-swiper';
 
 // COMPONENTS
-import Video from '../../components/Video/Video';
+// import Video from '../../components/Video/Video';
 
 // STATIC DATA
 import { slideData } from './data';
@@ -62,8 +62,8 @@ class Calendar extends Component {
         </div>
         <div className={styles.indexFooter}>
           <p>
-            RateMyDeath.org uses simple math: the number of viewers divided by the number of deaths. <br />
-            Let's show Trump the human cost of his precious ratings.
+          RateMyDeath.org uses simple math: the number of viewers divided by the number of deaths.
+          Trump should know the human cost of his precious ratings.
           </p>
           <a
             target="_blank"
@@ -107,7 +107,7 @@ class Calendar extends Component {
             TWEET THIS
           </button>
         </div>
-        <Video id={1} />
+        {/* <Video id={1} /> */}
       </div>
     )
   }

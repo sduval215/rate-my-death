@@ -11,8 +11,8 @@ const icon = require('./imgs/icon.svg');
 
 const Intro = ({ navigate }) => (
   <div className={styles.pageWrapper}>
+    <Video id={1} />
     <div className={styles.pageContainer}>
-      <Video id={1} />
       <div className={styles.introContainer}>
         <img alt="icon" src={icon} />
         <h1>RateMyDeath.org</h1>
