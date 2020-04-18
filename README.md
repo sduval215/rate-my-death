@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a2bef682-76cd-483c-ae19-663cb5f9a1c4/deploy-status)](https://app.netlify.com/sites/ratemydeath/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

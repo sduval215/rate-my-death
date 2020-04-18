@@ -4,15 +4,13 @@
   margin-top: 100px;
   // HERO STYLES
   .heroContainer {
-    @extend .flex;
+    @extend .flex, .drukWideRegular;
     position: relative;
     justify-content: center;
     align-items: center;
     div {
       position: absolute;
       flex-direction: column;
-      font-family: 'Druk Wide Regular';
-      font-weight: 500;
       p {
         font-size: 18px;
         line-height: 23px;
@@ -29,11 +27,9 @@
     }
   }
   .copyContainer {
-    @extend .contentWidth;
+    @extend .contentWidth, .drukWideRegular;
     margin: 0 auto;
     h4 {
-      font-family: 'Druk Wide Regular';
-      font-weight: 500;
       font-size: 18px;
       line-height: 23px;
       text-align: center;
@@ -84,7 +80,6 @@
         h3 {
           font-size: 35px;
           line-height: 39px;
-          color: #E95656;
         }
       }
       img {
@@ -99,19 +94,8 @@
       > p {
         font-size: 14px;
         line-height: 22px;
-        color: rgba(0, 0, 0, 0.65);
-        margin: 25px 0;
-        span {
-          font-size: 10px;
-          margin-right: 5px;
-          margin-left: -3px;
-          position: relative;
-          top: -10px;
-        }
       }
       .citationsContainer {
-        border-top: 1px solid #EBEBEB;
-        padding-top: 37px;
         a {
           font-size: 12px;
           line-height: 14px;

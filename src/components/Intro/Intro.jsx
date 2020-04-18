@@ -11,7 +11,9 @@ const icon = require('./imgs/icon.svg');
 
 const Intro = ({ navigate }) => (
   <div className={styles.pageWrapper}>
-    <Video id={1} />
+    <div className={styles.videoWrapper}>
+      <Video id={1} />
+    </div>
     <div className={styles.pageContainer}>
       <div className={styles.introContainer}>
         <img alt="icon" src={icon} />

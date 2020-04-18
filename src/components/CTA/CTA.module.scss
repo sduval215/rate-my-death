@@ -4,10 +4,9 @@
   padding: 80px 0;
   background-color: #000;
   div {
-    @extend .contentWidth;
+    @extend .contentWidth, .drukWideRegular;
     margin: 0 auto;
     h2 {
-      font-family: 'Druk Wide Regular';
       font-weight: 500;
       font-size: 20px;
       line-height: 26px;
@@ -17,13 +16,12 @@
     a {
       text-decoration: none;
       button {
+        @extend .drukWideRegular;
         display: block;
         margin: 35px auto;
         background-color: #E95656;
         padding: 16px 25px;
         border-radius: 25px;
-        font-family: 'Druk Wide Regular';
-        font-weight: 500;
         font-size: 14px;
         line-height: 18px;
         letter-spacing: 0.04em;
