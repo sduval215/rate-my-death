@@ -14,7 +14,7 @@ class Home extends Component {
   constructor(props){
     super(props);
     this.state = {
-      showIntro: false
+      showIntro: true
     }
   }
 
