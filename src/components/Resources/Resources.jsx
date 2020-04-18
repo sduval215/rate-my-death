@@ -31,7 +31,7 @@ const Resources = () => (
     <h3>
       Feeling helpless?
       <br />
-      Here are some ways you can help
+      Here are some ways you can help:
     </h3>
     <div className={styles.listContainer}>
       {renderResourceItem(ppeIcon, 'Donate Personal Protective Equipment (PPE)', 'https://thriveglobal.com/categories/first-responders-first/')}
