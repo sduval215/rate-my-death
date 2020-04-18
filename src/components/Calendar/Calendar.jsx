@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import Swiper from 'react-id-swiper';
 
 // COMPONENTS
-// import Video from '../../components/Video/Video';
+import Video from '../../components/Video/Video';
 
 // STATIC DATA
 import { slideData } from './data';
@@ -43,6 +43,25 @@ class Calendar extends Component {
       })
     }
   }
+
+  renderShareSection = (isIndex) => (
+    <div className={styles.shareFooter}>
+      <p className={isIndex ? styles.indexCopy : null}>
+      RateMyDeath.org uses simple math: the number of viewers divided by the number of deaths.
+      Trump should know the human cost of his precious ratings.
+      </p>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://twitter.com/intent/tweet?text=Check%20out%20our%20site:%20www.ratemydeath.org"
+      >
+        <button type="button">
+          <img alt="twitter" src={twitterIcon}/>
+          SHARE THIS SITE
+        </button>   
+      </a>
+    </div>
+  )
   
   /**
    * Renders the index slide
@@ -60,22 +79,7 @@ class Calendar extends Component {
             White House press briefings, read this detailed article from the <a target="_blank" rel="noopener noreferrer" href="https://www.nytimes.com/article/coronavirus-timeline.html">New York Times.</a>
           </p>
         </div>
-        <div className={styles.indexFooter}>
-          <p>
-          RateMyDeath.org uses simple math: the number of viewers divided by the number of deaths.
-          Trump should know the human cost of his precious ratings.
-          </p>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://twitter.com/intent/tweet?text=Check%20out%20our%20site:%20www.ratemydeath.org"
-          >
-            <button type="button">
-              <img alt="twitter" src={twitterIcon}/>
-              SHARE THIS SITE
-            </button>   
-          </a>
-        </div>
+        {this.renderShareSection(true)}
       </div>
     </div>
   )
@@ -86,6 +90,7 @@ class Calendar extends Component {
    */
   renderSlide = (data) => {
     const { month, day, viewers, body } = data;
+    const noViewers = typeof Number(viewers) === 'number' && Number(viewers) === 0;
     return (
       <div className={styles.calendarContent}>
         <div className={styles.header}>
@@ -98,16 +103,21 @@ class Calendar extends Component {
         <div className={styles.body}>
           <p dangerouslySetInnerHTML={{__html: body}}/>
         </div>
-        <div className={styles.footer}>
-          <p>If you died today, your life was worth</p>
-          <h3>{`${viewers} viewers`}</h3>
-          <p>to President Trump</p>
-          <button type="button">
-            <img alt="twitter" src={twitterIcon}/>
-            TWEET THIS
-          </button>
-        </div>
-        {/* <Video id={1} /> */}
+        {noViewers ?
+          this.renderShareSection()
+          : (
+            <div className={styles.footer}>
+              <p>If you died today, your life was worth</p>
+              <h3>{`${viewers} viewers`}</h3>
+              <p>to President Trump</p>
+              <button type="button">
+                <img alt="twitter" src={twitterIcon}/>
+                TWEET THIS
+              </button>
+            </div>
+          )
+        }
+        <Video id={noViewers ? 5 : null} />
       </div>
     )
   }

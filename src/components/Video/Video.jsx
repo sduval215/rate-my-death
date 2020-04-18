@@ -5,8 +5,8 @@ import styles from './Video.module.scss';
 
 
 const Video = ({ id }) => {
+  if (!id) return null;
   const video = require(`./videos/${id}.mp4`)
-  console.log(video);
   return(
     <div className={styles.videoWrapper}>
       <div className={styles.overlay} />
