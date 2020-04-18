@@ -177,13 +177,13 @@
   }
 }
 
-// .activeSlide {
-//   width: 90% !important;
-// }
+.activeSlide {
+  width: 90% !important;
+}
 
-// .prevSlide {
-//   // width: 101% !important; 
-// }
+.prevSlide {
+  margin-left: 4.5%;
+}
 
 // .nextSlide {
 //   // width: 100% !important;
@@ -267,6 +267,20 @@
 }
 
 @media (max-width: 700px) {
+
+  /* SHARED CALENDAR CONTENT */
+  .indexCalendarContent, .calendarContent {
+    margin: 20px;
+  }
+
+  .activeSlide {
+    width: 83% !important;
+  }
+  
+  .prevSlide {
+    margin-left: 8%;
+  }
+
   .mobileHeader {
     display: block;
   }
@@ -375,7 +389,7 @@
   color: rgba(0, 0, 0, 0.65) !important;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 425px) {
   /* SHARED CALENDAR CONTENT */
   .indexCalendarContent, .calendarContent {
     margin: 10px !important;
