@@ -5,10 +5,8 @@
   margin-top: 85px;
   padding: 80px 0;
   h3 {
-    @extend .contentWidth;
+    @extend .contentWidth, .drukWideRegular;
     margin: 0 auto;
-    font-weight: 500;
-    font-family: 'Druk Wide Regular';
     font-size: 20px;
     line-height: 26px;
     text-align: center;

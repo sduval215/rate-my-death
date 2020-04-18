@@ -1,15 +1,20 @@
+@import "../../App.scss";
+
 .pageWrapper {
   z-index: 5;
+}
+
+.videoWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
   height: 100%;
   width: 100%;
 }
 
 .introContainer {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  @extend .absoluteCenter;
   z-index: 10;
   color: white;
   text-align: center;
@@ -32,6 +37,7 @@
     margin-bottom: 25px;
   }
   span {
+    @extend .drukWideRegular;
     cursor: pointer;
     width: 280px;
     height: 50px;
@@ -39,7 +45,6 @@
     background-color: #FFF;
     text-decoration: none;
     color: #000;
-    font-family: 'Druk Wide Regular';
     display: flex;
     margin: 0 auto;
     justify-content: center;
@@ -50,7 +55,6 @@
 
 @media (max-width: 600px) {
   .introContainer {
-    width: 80%;
     p {
       br {
         display: none;
@@ -61,6 +65,7 @@
 
 @media (max-width: 450px) {
   .introContainer {
+    width: 80%;
     h1 {
       font-size: 32px;
       text-align: center;
@@ -76,9 +81,10 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  .pageWrapper, .videoWrapper {
+    height: 600px;
+  }
   .introContainer {
-    h1 {
-      color: green !important;
-    }
+    margin: 125px 0 50px;
   }
 }
