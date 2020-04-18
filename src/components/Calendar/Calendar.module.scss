@@ -234,6 +234,43 @@
   }
 }
 
+/* END SLIDE STYLES */
+
+.endSlide {
+  cursor: grab;
+  position: relative;
+  .contentContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    p {
+      font-family: 'Graphik Regular';
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+    }
+    button {
+      margin: 52px auto;
+      @extend .flex;
+      padding: 15px 20px;
+      background: #FFFFFF;
+      border-radius: 25px;
+      p {
+        font-family: 'Druk Wide Regular';
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.04em;
+        color: #1C1C1C;
+      }
+      img {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
 @media (max-width: 600px) {
   .mobileHeader {
     display: block;
