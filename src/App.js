@@ -12,7 +12,7 @@ import {
 import Home from './pages/Home/Home';
 import Intro from './pages/Intro/Intro';
 
-import './App.css';
+import './App.scss';
 
 function App() {
   return (

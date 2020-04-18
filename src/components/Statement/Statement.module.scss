@@ -1,11 +1,4 @@
-.flex {
-  display: flex;
-  justify-content: space-between;
-}
-
-.contentWidth {
-  width: 60%;
-}
+@import "../../App.scss";
 
 .statementContainer {
   margin-top: 100px;
@@ -77,20 +70,54 @@
   }
 }
 
-@media (max-width: 1150px) {
-  .contentWidth {
-    width: 70%;
+@media (max-width: 600px) {
+  .statementContainer {
+    margin-top: 30px;
+    // HERO STYLES
+    .heroContainer {
+      div {
+        text-align: center;
+        p {
+          font-size: 10px;
+          line-height: 13px;
+        }
+        h3 {
+          font-size: 35px;
+          line-height: 39px;
+          color: #E95656;
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .copyContainer {
+      h4 {
+        font-size: 14px;
+        line-height: 22px;
+      }
+      > p {
+        font-size: 14px;
+        line-height: 22px;
+        color: rgba(0, 0, 0, 0.65);
+        margin: 25px 0;
+        span {
+          font-size: 10px;
+          margin-right: 5px;
+          margin-left: -3px;
+          position: relative;
+          top: -10px;
+        }
+      }
+      .citationsContainer {
+        border-top: 1px solid #EBEBEB;
+        padding-top: 37px;
+        a {
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+    }
   }
-}
-
-@media (max-width: 1000px) {
-  .contentWidth {
-    width: 75%;
-  }
-}
-
-@media (max-width: 800px) {
-  .contentWidth {
-    width: 80%;
-  } 
+  
 }

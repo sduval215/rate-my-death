@@ -1,17 +1,12 @@
-.flex {
-  display: flex;
-  justify-content: space-between;
-}
-
-.contentWidth {
-  width: 60%;
-}
+@import "../../App.scss";
 
 .resourcesContainer {
   background: linear-gradient(180deg, #E95656 0%, #E95656 100%);
   margin-top: 85px;
   padding: 80px 0;
   h3 {
+    @extend .contentWidth;
+    margin: 0 auto;
     font-weight: 500;
     font-family: 'Druk Wide Regular';
     font-size: 20px;
@@ -34,7 +29,7 @@
         border-right: 1px solid #E95656;
         width: 10%;
         img {
-          height: 30px;
+          width: 65px;
         }
       }
       .link {
@@ -57,28 +52,39 @@
   }
 }
 
-@media (max-width: 1150px) {
-  .contentWidth {
-    width: 70%;
-  }
-}
-
-@media (max-width: 1000px) {
-  .contentWidth {
-    width: 75%;
-  }
-}
-
-@media (max-width: 800px) {
-  .contentWidth {
-    width: 80%;
-  } 
-}
-
 @media (max-width: 600px) {
+  .resourcesContainer {
+    h3 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    .listContainer {
+      .listItem {
+        .icon {
+          img {
+            width: 100%;
+          }
+        }
+        .link {
+          p {
+            font-size: 14px;
+          }
+          img {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
   .resourcesContainer {
     .listContainer {
       .listItem {
+        .icon {
+          width: 15%
+        }
         .link {
           p {
             font-size: 14px;

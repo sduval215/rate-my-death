@@ -15,6 +15,16 @@ button {
   cursor: pointer;
 }
 
+/* GLOBAL EXTENSIONS */
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contentWidth {
+  width: 60%;
+}
+
 @font-face {
   font-family: 'Graphik Regular';
   src: url('./static/fonts/Graphik/Graphik-Regular.otf')
@@ -37,4 +47,29 @@ button {
     format('opentype');
   font-weight: normal;
   font-style: normal;
+}
+
+@media (max-width: 1150px) {
+  .contentWidth {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .contentWidth {
+    width: 75%;
+  }
+}
+
+@media (max-width: 800px) {
+  .contentWidth {
+    width: 80%;
+  } 
+}
+
+
+@media (max-width: 550px) {
+  .contentWidth {
+    width: 90%;
+  } 
 }
