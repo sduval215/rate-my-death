@@ -41,25 +41,33 @@ class Calendar extends Component {
   
   renderIndexSlide = () => (
     <div className={[ styles.calendar, styles.indexCalendar ].join(' ')}>
-      <div className={styles.indexHeader}>
-        <img alt="index-icon" src={indexIcon}/>
-          <p>JAN-MAR</p>
-      </div>
-      <div className={styles.indexBody}>
-        <p>
-          For an in-depth timeline of events before Trump's <span>campaign rallies</span>
-          White House press briefings, read this detailed article from the <a href="/">New York Times.</a>
-        </p>
-      </div>
-      <div className={styles.indexFooter}>
-        <p>
-          RateMyDeath.org uses simple math: the number of viewers divided by the number of deaths. <br />
-          Let's show Trump the human cost of his precious ratings.
-        </p>
-        <button type="button">
-          <img alt="twitter" src={twitterIcon}/>
-          SHARE THIS SITE
-        </button>
+      <div className={styles.indexCalendarContent}>
+        <div className={styles.indexHeader}>
+          <img alt="index-icon" src={indexIcon}/>
+            <p>JAN-MAR</p>
+        </div>
+        <div className={styles.indexBody}>
+          <p>
+            For an in-depth timeline of events before Trump's <span>campaign rallies</span>
+            White House press briefings, read this detailed article from the <a target="_blank" rel="noopener noreferrer" href="https://www.nytimes.com/article/coronavirus-timeline.html">New York Times.</a>
+          </p>
+        </div>
+        <div className={styles.indexFooter}>
+          <p>
+            RateMyDeath.org uses simple math: the number of viewers divided by the number of deaths. <br />
+            Let's show Trump the human cost of his precious ratings.
+          </p>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/intent/tweet?text=Check%20out%20our%20site:%20www.ratemydeath.org"
+          >
+            <button type="button">
+              <img alt="twitter" src={twitterIcon}/>
+              SHARE THIS SITE
+            </button>   
+          </a>
+        </div>
       </div>
     </div>
   )
@@ -84,9 +92,10 @@ class Calendar extends Component {
           <p>to President Trump</p>
           <button type="button">
             <img alt="twitter" src={twitterIcon}/>
-            TWEET @ TRUMP
+            TWEET THIS
           </button>
         </div>
+        <Video id={1} />
       </div>
     )
   }
@@ -102,9 +111,9 @@ class Calendar extends Component {
             allowTouchMove
             slide
             keyboard
-            initialSlide={slideData.length - 1}
-            // slideNextClass={styles.nextSlide}
-            // slidePrevClass={styles.prevSlide}
+            // initialSlide={slideData.length - 1}
+            slideNextClass={styles.nextSlide}
+            slidePrevClass={styles.prevSlide}
             slideActiveClass={styles.activeSlide}
             wrapperClass={styles.swiperContainer}
           >
@@ -118,7 +127,6 @@ class Calendar extends Component {
                 ].join(' ')}
                 >
                   {this.renderSlide(data)}
-                  <Video id={1} />
                 </div>
               )
             })}
