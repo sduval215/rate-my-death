@@ -15,13 +15,15 @@ import styles from './Calendar.module.scss';
 const indexIcon = require('./imgs/index-icon.svg');
 const icon = require('./imgs/icon.svg');
 const twitterIcon = require('../../static/imgs/twitter-icon.svg');
+const backArrow = require('./imgs/back-arrow.svg');
 
 class Calendar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      slideIndex: slideData.length - 1
     }
+    this.swiper = null;
   }
 
   /**
@@ -29,7 +31,10 @@ class Calendar extends Component {
    * @param {Class} swiper
    */
   setSwiperListener = (swiper) => {
+    // set global swiper class reference for future use
+    this.swiper = swiper;
     if(swiper !== null) {
+      // handles listeners for cursor UI updates
       swiper.on('sliderMove', () => {
         this.setState({ dragging: true });
       });
@@ -39,6 +44,9 @@ class Calendar extends Component {
     }
   }
   
+  /**
+   * Renders the index slide
+   */
   renderIndexSlide = () => (
     <div className={[ styles.calendar, styles.indexCalendar ].join(' ')}>
       <div className={styles.indexCalendarContent}>
@@ -72,6 +80,10 @@ class Calendar extends Component {
     </div>
   )
 
+  /**
+   * Renders individual slide UI
+   * @param {Object} data
+   */
   renderSlide = (data) => {
     const { month, day, viewers, body } = data;
     return (
@@ -100,8 +112,16 @@ class Calendar extends Component {
     )
   }
 
+  /**
+   * Handlles swiper carousel index reset
+   */
+  handleReset = () => {
+    console.log(this.swiper);
+    this.swiper.slideTo(0, 1000)
+  }
+
   render() {
-    const { dragging } = this.state;
+    const { dragging, slideIndex } = this.state;
     return(
       <div className={styles.calendarWrapper}>
         <div className={styles.calendarContainer}>
@@ -111,7 +131,8 @@ class Calendar extends Component {
             allowTouchMove
             slide
             keyboard
-            // initialSlide={slideData.length - 1}
+            activeSlide={slideIndex}
+            initialSlide={slideIndex}
             slideNextClass={styles.nextSlide}
             slidePrevClass={styles.prevSlide}
             slideActiveClass={styles.activeSlide}
@@ -121,15 +142,36 @@ class Calendar extends Component {
               // RENDER INDEX SLIDE ON FIRST INDEX
               if (index === 0) return this.renderIndexSlide();
               return(
-                <div className={[
-                  styles.calendar,
-                  dragging ? styles.dragging : null
-                ].join(' ')}
+                <div
+                  key={index}
+                  className={[
+                    styles.calendar,
+                    dragging ? styles.dragging : null
+                  ].join(' ')}
                 >
                   {this.renderSlide(data)}
                 </div>
               )
             })}
+            {/* END SLIDE */}
+            <div className={[
+              styles.endSlide,
+              dragging ? styles.dragging : null
+            ].join(' ')}>
+              <div className={styles.contentContainer}>
+                <p>
+                  Accurate ratings data for the White House press briefings
+                  becomes available ~24hrs after airtime. Stay tuned.
+                </p>
+                <button
+                  onClick={this.handleReset}
+                  type="button"
+                >
+                  <img alt="back-arrow" src={backArrow}/>
+                  <p>GO BACK</p>
+                </button>
+              </div>
+            </div>
           </Swiper>
         </div>
       </div>
