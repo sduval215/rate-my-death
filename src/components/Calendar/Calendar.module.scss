@@ -337,6 +337,7 @@
   /* MAIN SLIDE STYLES */
   .calendarContent {
     border: 1px solid #FFF;
+    z-index: 10;
     .header {
       img {
         opacity: 0;
