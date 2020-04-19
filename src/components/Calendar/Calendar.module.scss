@@ -138,7 +138,6 @@
   }
   .footer {
     @extend .front;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
     p {
       font-family: 'Graphik Regular';
@@ -230,7 +229,6 @@
 
 .shareFooter {
   z-index: 1;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
   p {
     margin: 35px auto 25px;
     width: 550px;
