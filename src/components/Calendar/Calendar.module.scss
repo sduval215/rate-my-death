@@ -32,7 +32,9 @@
       @extend .flex;
       align-items: center;
       img {
-        height: 20px;
+        margin-top: 0px;
+        margin-left: 10px;
+        height: 25px;
       }
       p {
         @extend .drukWideRegular;
@@ -76,8 +78,11 @@
   cursor: grabbing !important;
 }
 
+.calendarContent, .indexCalendarContent {
+  margin: 10px !important;
+}
+
 .calendarContent {
-  margin: 30px;
   border: 6px solid #FFF;
   z-index: 99999999;
   flex-direction: column;
@@ -89,9 +94,9 @@
   .header {
     @extend .flex, .front;
     img {
-      margin-top: 25px;
+      margin-top: 20px;
       margin-left: 25px;
-      height: 20px;
+      height: 25px;
     }
     div {
       @extend .drukWideRegular;
@@ -253,6 +258,42 @@
   }
 }
 
+@media (max-width: 1500px) {
+  .calendarContent, .indexCalendarContent {
+    .header {
+      div {
+        p {
+          font-size: 20px;
+          line-height: 28px;
+        }
+        h2 {
+          margin-top: -10px;
+          font-size: 35px;
+          line-height: 45px;
+        }
+      }
+    }
+    .body, .indexBody {
+      p {
+        width: 85%;
+        font-size: 26px;
+        line-height: 30px;
+      }
+    }
+    .footer, .indexFooter {
+      p {
+        font-size: 16px;
+        line-height: 18px;
+      }
+      h3 {
+        font-size: 40px;
+        line-height: 53px;
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
 @media (max-width: 700px) {
   
   .calendar {
@@ -393,6 +434,14 @@
   }
   /* INDEX SLIDE STYLES */
   .indexCalendarContent {
+    .indexHeader {
+      img {
+        height: 1px !important;
+      }
+      p {
+        font-size: 18px !important;
+      }
+    }
     .indexFooter {
       a {
         button {
