@@ -30,3 +30,20 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .CTAContainer {
+    div {
+      h2 {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    a {
+      button {
+        font-size: 12px !important;
+        line-height: 16px;
+      }
+    }
+  }
+}
