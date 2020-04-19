@@ -147,6 +147,7 @@ class Calendar extends Component {
             allowTouchMove
             slide
             keyboard
+            slidesPerView={1.05}
             activeSlide={slideIndex}
             initialSlide={slideIndex}
             slideNextClass={styles.nextSlide}
