@@ -128,8 +128,7 @@ class Calendar extends Component {
    * Handlles swiper carousel index reset
    */
   handleReset = () => {
-    console.log(this.swiper);
-    this.swiper.slideTo(0, 1000)
+    this.swiper.slideTo(slideData.length - 1, 500)
   }
 
   render() {
