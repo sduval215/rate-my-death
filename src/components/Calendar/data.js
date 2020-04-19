@@ -1,5 +1,11 @@
 const slideData = [
   {
+    month: null,
+    day: null,
+    viewers: null,
+    body: null
+  },
+  {
     month: "Mar",
     day: 29,
     viewers: "21,408",
