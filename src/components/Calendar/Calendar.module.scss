@@ -19,12 +19,6 @@
   box-sizing: border-box; 
 }
 
-.mobileHeader {
-  height: 25px;
-  margin: 10px auto 5px;
-  display: none;
-}
-
 /* INDEX CALENDAR STYLES */
 
 .indexCalendar {
@@ -279,10 +273,6 @@
   
   .prevSlide {
     margin-left: 8%;
-  }
-
-  .mobileHeader {
-    display: block;
   }
   .calendar {
     height: 800px;
