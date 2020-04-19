@@ -21,7 +21,7 @@ class Calendar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      slideIndex: 0
+      slideIndex: 1
     }
     this.swiper = null;
   }
@@ -34,7 +34,7 @@ class Calendar extends Component {
     // set global swiper class reference for future use
     this.swiper = swiper;
     // animate
-    setTimeout(() => swiper.slideTo(slideData.length - 1, 1000), 500)
+    setTimeout(() => swiper.slideTo(slideData.length - 1, 2000), 500)
     if(swiper !== null) {
       // handles listeners for cursor UI updates
       swiper.on('sliderMove', () => {
