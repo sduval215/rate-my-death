@@ -34,14 +34,18 @@ class Calendar extends Component {
     // set global swiper class reference for future use
     this.swiper = swiper;
     // animate
-    setTimeout(() => swiper.slideTo(slideData.length - 1, 2000), 500)
+    setTimeout(() => swiper.slideTo(slideData.length - 1, 2000), 500);
+    setTimeout(() => this.setState({ slideIndex: slideData.length - 1 }), 2500);
     if(swiper !== null) {
       // handles listeners for cursor UI updates
       swiper.on('sliderMove', () => {
-        this.setState({ dragging: true });
+        this.setState({ slideIndex: swiper.activeIndex, dragging: true })
       });
       swiper.on('touchEnd', () => {
-        this.setState({ dragging: false });
+        this.setState({ dragging: false})
+      });
+      swiper.on('slideChange', () => {
+        this.setState({ slideIndex: swiper.activeIndex})
       })
     }
   }
@@ -90,9 +94,11 @@ class Calendar extends Component {
    * Renders individual slide UI
    * @param {Object} data
    */
-  renderSlide = (data) => {
-    const { month, day, viewers, body } = data;
+  renderSlide = (data, index) => {
+    const { slideIndex } = this.state;
+    const { month, day, viewers, body, videoID } = data;
     const noViewers = typeof Number(viewers) === 'number' && Number(viewers) === 0;
+
     return (
       <div className={styles.calendarContent}>
         <div className={styles.header}>
@@ -119,7 +125,7 @@ class Calendar extends Component {
             </div>
           )
         }
-        <Video id={noViewers ? 5 : null} />
+        <Video canRender={index === slideIndex} id={noViewers ? 10 : videoID} />
       </div>
     )
   }
@@ -159,7 +165,7 @@ class Calendar extends Component {
                     dragging ? styles.dragging : null
                   ].join(' ')}
                 >
-                  {this.renderSlide(data)}
+                  {this.renderSlide(data, index)}
                 </div>
               )
             })}
