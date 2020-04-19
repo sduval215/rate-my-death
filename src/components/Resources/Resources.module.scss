@@ -3,10 +3,10 @@
 .resourcesContainer {
   background: linear-gradient(180deg, #E95656 0%, #E95656 100%);
   margin-top: 85px;
-  padding: 80px 0;
+  padding: 35px 0 85px;
   h3 {
     @extend .contentWidth, .drukWideRegular;
-    margin: 0 auto;
+    margin: 35px auto;
     font-size: 20px;
     line-height: 26px;
     text-align: center;
@@ -16,7 +16,6 @@
     @extend .contentWidth;
     background-color: #FFF;
     margin: 0 auto;
-    margin-top: 35px;
     .listItem {
       border-bottom: 1px solid #E95656;
       @extend .flex;
@@ -38,7 +37,7 @@
         p {
           font-family: 'Graphik Regular';
           font-style: normal;
-          font-size: 18px;
+          font-size: 16px;
           line-height: 20px;
           color: #000000;
         }
@@ -52,6 +51,7 @@
 
 @media (max-width: 600px) {
   .resourcesContainer {
+    padding: 1px 0 35px;
     h3 {
       font-size: 14px;
       line-height: 18px;
@@ -66,9 +66,10 @@
         }
         .link {
           p {
-            font-size: 14px;
+            font-size: 13px;
           }
           img {
+            height: 15px;
             margin-left: 20px;
           }
         }
@@ -82,14 +83,36 @@
     .listContainer {
       .listItem {
         .icon {
-          width: 15%
+          width: 13%;
         }
         .link {
+          padding: 0 15px;
           p {
-            font-size: 14px;
+            font-size: 12px;
+            line-height: 14px;
           }
+          a {
+            img {
+              height: 10px;
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* MOBILE LANDSCAPE STYLES */
+@media screen and (min-width: 320px) and (max-width: 850px) and (orientation: landscape) {
+  .resourcesContainer {
+    .listContainer {
+      .listItem {
+        .icon {
+          width: 13%;
           img {
-            margin-left: 20px;
+            height: 30px;
+            height: 100%;
           }
         }
       }
