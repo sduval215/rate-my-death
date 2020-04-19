@@ -1,5 +1,11 @@
+.transition {
+  transition: 0.3s ease-in;
+}
+
 .videoWrapper {
+  @extend .transition;
   position: absolute;
+  background-size: cover;
   top: 0;
   height: 100%;
   width: 100%;
@@ -8,8 +14,8 @@
 }
 
 video {
-  z-index: 0;
-  opacity: 0.4;
+  z-index: -1;
+  opacity: 0;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -17,15 +23,26 @@ video {
   min-height: 100%;
 }
 
+.renderVideo {
+  @extend .transition;
+  opacity: 1;
+}
+
 .overlay {
-  z-index: 0 !important;
+  z-index: 1 !important;
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.9)
+  background-color: rgba(0,0,0,0.6)
 }
 
 @media (max-width: 500px) {
   video {
     left: -450px;
+  }
+}
+
+@media (max-width: 400px) {
+  video {
+    top: 0px;
   }
 }
