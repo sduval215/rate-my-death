@@ -135,7 +135,6 @@ class Calendar extends Component {
     return(
       <div className={styles.calendarWrapper}>
         <div className={styles.calendarContainer}>
-          <img className={styles.mobileHeader} alt="icon" src={icon} /> 
           <Swiper
             getSwiper={this.setSwiperListener}
             allowTouchMove
