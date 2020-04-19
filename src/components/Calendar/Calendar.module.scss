@@ -13,7 +13,6 @@
 /* CALENDAR STYLES */
 
 .calendarContainer {
-  padding-top: 25px;
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
   box-sizing: border-box; 
@@ -68,7 +67,6 @@
 
 .calendar {
   cursor: grab;
-  // margin-right: 30px;
   box-sizing: border-box;
   display: flex;
   height: 95vh;
@@ -183,15 +181,10 @@
 //   // width: 100% !important;
 // }
 
-
 .swiperContainer {
   z-index: 1000;
   display: flex;
   color: #FFF;
-  // height: 91vh;
-  // > div {
-  //   height: 98% !important;
-  // }
 }
 
 /* END SLIDE STYLES */
@@ -261,10 +254,14 @@
 }
 
 @media (max-width: 700px) {
+  
+  .calendar {
+    padding: 15px 0;
+  }
 
   /* SHARED CALENDAR CONTENT */
   .indexCalendarContent, .calendarContent {
-    margin: 20px;
+    margin: 5px !important;
   }
 
   .activeSlide {
@@ -275,7 +272,7 @@
     margin-left: 8%;
   }
   .calendar {
-    height: 800px;
+    height: 85vh;
   }
   /* INDEX SLIDE STYLES */
   .indexCalendarContent {
@@ -289,59 +286,51 @@
     }
     .indexBody {
       p {
-        font-size: 20px !important;
+        width: 90% !important;
+        font-size: 16px !important;
         line-height: 22px !important;
       }
     }
   }
 
-  /* SHARE FOOTER STYLES */
-
-  .shareFooter {
-    p {
-      margin: 35px auto 25px;
-      width: 100%;
-    }
-  }
-
   /* MAIN SLIDE STYLES */
   .calendarContent {
-    border: 2px solid #FFF;
+    border: 1px solid #FFF;
     .header {
       img {
         opacity: 0;
       }
       div {
-        border: 2px solid #FFFFFF;
+        border: 1px solid #FFFFFF;
         box-sizing: border-box;
-        padding: 10px 20px;
+        padding: 5px 10px;
         position: relative;
-        top: -2px;
-        left: 2px;
+        top: -1px;
+        left: 1px;
         text-align: center;
         p {
-          font-size: 18px;
-          line-height: 34px;
+          font-size: 14px;
+          line-height: 26px;
           letter-spacing: 0.03em;
           text-transform: uppercase;
         }
         h2 {
           margin-top: -10px;
-          font-size: 36px;
-          line-height: 45px;
+          font-size: 25px;
+          line-height: 30px;
         }
       }
     }
     .body {
       p {
-        width: 85%;
-        font-size: 20px;
-        line-height: 22px;
+        width: 90%;
+        font-size: 18px;
+        line-height: 20px;
       }
     }
     .footer {
       p {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 18px;
       }
       p:first-of-type {
@@ -362,14 +351,32 @@
     .contentContainer {
       width: 80%;
       p {
-        font-size: 20px;
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 20px;
       }
       button {
-        p {
-          font-size: 14px;
-          line-height: 18px;
+        img {
+          align-self: center;
+          height: 10px;
         }
+        p {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+  /* SHARE FOOTER STYLES */
+  .shareFooter {
+    p {
+      margin: 20px auto;
+      width: 85%;
+      font-size: 11px;
+      line-height: 16px;
+    }
+    a {
+      button {
+        margin-bottom: 15px;
       }
     }
   }
@@ -382,7 +389,7 @@
 @media (max-width: 425px) {
   /* SHARED CALENDAR CONTENT */
   .indexCalendarContent, .calendarContent {
-    margin: 10px !important;
+    margin: 2px !important;
   }
   /* INDEX SLIDE STYLES */
   .indexCalendarContent {
@@ -394,15 +401,11 @@
       }
     }
   }
-  /* MAIN CALENDAR STYLES */
-  .calendar {
-    height: 650px !important;
-  }
   /* MAIN SLIDE STYLES */
   .calendarContent {
     .footer {
       p {
-        font-size: 14px;
+        font-size: 13px;
       }
       h3 {
         font-size: 26px;
@@ -412,9 +415,61 @@
   }
 }
 
-/* MOBILE LANDSCAPE STYLES */
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-  .calendar {
-    height: 500px;
+@media (max-width: 330px) {
+  .calendarContent, .indexCalendarContent {
+    .header, .indexHeader {
+      img {
+        height: 1px;
+      }
+      p {
+        font-size: 16px !important;
+      }
+    }
+    .body, .indexBody {
+      p {
+        font-size: 16px;
+      }
+    }
+    .footer, .indexFooter {
+      h3 {
+        margin: -5px 0;
+        font-size: 20px;
+      }
+    }
   }
+}
+
+/* MOBILE LANDSCAPE STYLES */
+@media screen and (min-width: 320px) and (max-width: 850px) and (orientation: landscape) {
+  .calendar {
+    height: auto;
+  }
+
+  .calendarContent {
+    .body {
+      p {
+        margin: 50px auto;
+        width: 90% !important;
+      }
+    }
+    .footer {
+      p {
+        font-size: 10px;
+      }
+    }
+  }
+    /* SHARE FOOTER STYLES */
+    .shareFooter {
+      p {
+        margin: 20px auto;
+        width: 85%;
+        font-size: 9px;
+        line-height: 12px;
+      }
+      a {
+        button {
+          margin-bottom: 15px;
+        }
+      }
+    }
 }
