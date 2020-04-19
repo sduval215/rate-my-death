@@ -29,15 +29,13 @@ const renderResourceItem = (icon, label, route) => (
 const Resources = () => (
   <div className={styles.resourcesContainer}>
     <h3>
-      Feeling helpless?
-      <br />
-      Here are some ways you can help:
+      Feeling helpless? Here are some ways you can help:
     </h3>
     <div className={styles.listContainer}>
       {renderResourceItem(ppeIcon, 'Donate Personal Protective Equipment (PPE)', 'https://thriveglobal.com/categories/first-responders-first/')}
       {renderResourceItem(customPPEIcon, 'Make your own PPE', 'https://www.youtube.com/watch?v=zm_NmpdgWWA')}
       {renderResourceItem(hospitalIcon, 'Send Food to a Hospital', 'https://www.gofundme.com/f/help-us-send-dinner-to-healthcare-heroes-in-nyc')}
-      {renderResourceItem(bloodIcon, 'Donate Blood or Money to the Red Cross', 'https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/coronavirus-safety.html')}
+      {renderResourceItem(bloodIcon, 'Donate to the Red Cross', 'https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/coronavirus-safety.html')}
       {renderResourceItem(mailIcon, 'Save the Postal Service', 'https://store.usps.com/store/home')}
       {renderResourceItem(businessIcon, 'Support local businesses', '')}
     </div>

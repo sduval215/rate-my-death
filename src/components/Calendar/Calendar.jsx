@@ -50,7 +50,7 @@ class Calendar extends Component {
     <div className={styles.shareFooter}>
       <p className={isIndex ? styles.indexCopy : null}>
       RateMyDeath.org uses simple math: the number of viewers divided by the number of deaths.
-      Trump should know the human cost of his precious ratings.
+      There's blood on Trump's ratings.
       </p>
       <a
         target="_blank"
