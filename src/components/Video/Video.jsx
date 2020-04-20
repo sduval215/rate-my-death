@@ -32,7 +32,7 @@ class Video extends Component {
   }
 
   render() { 
-    const { id } = this.props;
+    const { id, autoPlay } = this.props;
     const { isReady } = this.state;
     if (!id) return null;
     const video = require(`./videos/${id}.mp4`);
@@ -46,6 +46,7 @@ class Video extends Component {
           ref={this.videoPlayer}
           className={isReady ? styles.renderVideo : null}
           onCanPlay={this.handlePlayLogic}
+          autoPlay={autoPlay}
           muted
           playsInline
           loop

@@ -12,7 +12,7 @@ const logo = require('./imgs/logo.svg');
 const Intro = ({ navigate }) => (
   <div className={styles.pageWrapper}>
     <div className={styles.videoWrapper}>
-      <Video canRender id={1} />
+      <Video autoPlay canRender id={1} />
     </div>
     <div className={styles.pageContainer}>
       <div className={styles.introContainer}>
