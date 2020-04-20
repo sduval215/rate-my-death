@@ -224,10 +224,16 @@
   height: auto;
   .contentContainer {
     @extend .absoluteCenter;
+    > img {
+      display: block;
+      margin: 0 auto 50px;
+      height: 100px;
+    }
     p {
+      width: 450px;
       font-family: 'Graphik Regular';
-      font-size: 20px;
-      line-height: 28px;
+      font-size: 16px;
+      line-height: 24px;
       text-align: center;
     }
     button {
@@ -412,7 +418,11 @@
   .endSlide {
     .contentContainer {
       width: 80%;
+      > img {
+        width: 70% !important;
+      }
       p {
+        width: 100%;
         font-size: 16px;
         line-height: 20px;
       }
@@ -433,7 +443,7 @@
   color: rgba(0, 0, 0, 0.65) !important;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 400px) {
   /* SHARED CALENDAR CONTENT */
   .indexCalendarContent, .calendarContent {
     margin: 2px !important;
@@ -468,6 +478,15 @@
       }
     }
   }
+  /* END SLIDE STYLES */
+  .endSlide {
+    .contentContainer {
+      width: 70%;
+      > img {
+        width: 90% !important;
+      }
+    }
+  }
 }
 
 @media (max-width: 330px) {
@@ -489,6 +508,15 @@
       h3 {
         margin: -5px 0;
         font-size: 20px;
+      }
+    }
+  }
+  /* END SLIDE STYLES */
+  .endSlide {
+    .contentContainer {
+      width: 80%;
+      > img {
+        width: 90% !important;
       }
     }
   }

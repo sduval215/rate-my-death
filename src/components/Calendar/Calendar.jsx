@@ -16,6 +16,7 @@ const indexIcon = require('./imgs/index-icon.svg');
 const icon = require('./imgs/icon.svg');
 const twitterIcon = require('../../static/imgs/twitter-icon.svg');
 const backArrow = require('./imgs/back-arrow.svg');
+const logo = require('./imgs/logo.svg');
 
 class Calendar extends Component {
   constructor(props) {
@@ -184,6 +185,7 @@ class Calendar extends Component {
               dragging ? styles.dragging : null
             ].join(' ')}>
               <div className={styles.contentContainer}>
+                <img alt="logo" src={logo} />
                 <p>
                   Accurate ratings data for the White House press briefings
                   becomes available ~24hrs after airtime. Stay tuned.
