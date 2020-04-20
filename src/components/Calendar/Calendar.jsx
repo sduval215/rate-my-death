@@ -18,6 +18,13 @@ const twitterIcon = require('../../static/imgs/twitter-icon.svg');
 const backArrow = require('./imgs/back-arrow.svg');
 const logo = require('./imgs/logo.svg');
 
+// SHARE COPY OPTIONS
+const shareCopy = [
+  'We’re literally dying for attention @realdonaldtrump: ☠️📺RateMyDeath.org %23COVID19',
+  'We die, @realdonaldtrump brags. How many lives are his ratings worth? ☠️📺RateMyDeath.org %23COVID19',
+  'There’s blood on @realdonaldtrump’s ratings: ☠️📺RateMyDeath.org %23COVID19'
+]
+
 class Calendar extends Component {
   constructor(props) {
     super(props);
@@ -26,6 +33,13 @@ class Calendar extends Component {
     }
     this.swiper = null;
   }
+
+  /**
+   * Randomize share option
+   */
+  randomizeShare = () => (
+    Math.floor(Math.random() * 3)
+  );
 
   /**
    * Sets swiper listener logic
@@ -60,7 +74,7 @@ class Calendar extends Component {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://twitter.com/intent/tweet?text=Check%20out%20our%20site:%20www.ratemydeath.org"
+        href={`https://twitter.com/intent/tweet?text=${shareCopy[this.randomizeShare()]}`}
       >
         <button type="button">
           <img alt="twitter" src={twitterIcon}/>
