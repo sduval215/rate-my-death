@@ -449,6 +449,10 @@
 }
 
 @media (max-width: 400px) {
+  .slideButton {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
   /* SHARED CALENDAR CONTENT */
   .indexCalendarContent, .calendarContent {
     margin: 2px !important;
