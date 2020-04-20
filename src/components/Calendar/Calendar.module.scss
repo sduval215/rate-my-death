@@ -1,5 +1,24 @@
 @import "../../App.scss";
 
+/* SHARED STYLES */
+.slideButton {
+  @extend .flex;
+  margin: 52px auto;
+  align-items: center;
+  border: 2px solid #000;
+  background: #FFFFFF;
+  border-radius: 25px;
+  p {
+    @extend .drukWideRegular;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    color: #1C1C1C;
+    margin: 0;
+    width: 100%;
+  }
+}
+
 .front {
   z-index: 5;
 }
@@ -61,6 +80,16 @@
           text-decoration: line-through;
           text-decoration-color: #E95656;
           margin-right: 5px;
+        }
+      }
+      button {
+        @extend .slideButton;
+        width: 272px;
+        height: 50px;
+        padding: 0 15px;
+        img {
+          transform: rotate(180deg);
+          margin-left: 5px;
         }
       }
     }
@@ -202,18 +231,8 @@
       text-align: center;
     }
     button {
-      @extend .flex;
-      margin: 52px auto;
+      @extend .slideButton;
       padding: 15px 20px;
-      background: #FFFFFF;
-      border-radius: 25px;
-      p {
-        @extend .drukWideRegular;
-        font-size: 14px;
-        line-height: 18px;
-        letter-spacing: 0.04em;
-        color: #1C1C1C;
-      }
       img {
         margin-right: 15px;
       }
@@ -290,6 +309,18 @@
 }
 
 @media (max-width: 700px) {
+  /* SHARED */
+  .slideButton {
+    width: auto;
+    img {
+      align-self: center;
+      height: 10px;
+    }
+    p {
+      font-size: 12px !important;
+      line-height: 16px !important;
+    }
+  }
   
   .calendar {
     padding: 15px 0;
@@ -300,16 +331,10 @@
     margin: 5px !important;
   }
 
-  // .activeSlide {
-  //   width: 83% !important;
-  // }
-  
-  // .prevSlide {
-  //   margin-left: 8%;
-  // }
   .calendar {
     height: 85vh;
   }
+
   /* INDEX SLIDE STYLES */
   .indexCalendarContent {
     .indexHeader {
@@ -390,16 +415,6 @@
       p {
         font-size: 16px;
         line-height: 20px;
-      }
-      button {
-        img {
-          align-self: center;
-          height: 10px;
-        }
-        p {
-          font-size: 12px;
-          line-height: 16px;
-        }
       }
     }
   }
