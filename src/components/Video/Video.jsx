@@ -36,7 +36,7 @@ class Video extends Component {
     const { isReady } = this.state;
     if (!id) return null;
     const video = require(`./videos/${id}.mp4`);
-    const backgroundImage = !isReady && id !== 10 ? require(`./videos/${id}-still.png`) : null;
+    const backgroundImage = id !== 10 ? require(`./videos/${id}-still.png`) : null;
     return(
       <div
         style={{ backgroundImage: `url(${backgroundImage})`}}
