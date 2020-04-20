@@ -84,6 +84,14 @@ class Calendar extends Component {
             For an in-depth timeline of events before Trump's <span>campaign rallies</span>
             White House press briefings, read this detailed article from the <a target="_blank" rel="noopener noreferrer" href="https://www.nytimes.com/article/coronavirus-timeline.html">New York Times.</a>
           </p>
+
+          <button
+            onClick={() => this.handleSlide(slideData.length - 1)}
+            type="button"
+          >
+            <p>JUMP TO TODAY</p>
+            <img alt="Today" src={backArrow}/>
+          </button>
         </div>
         {this.renderShareSection(true)}
       </div>
@@ -133,8 +141,8 @@ class Calendar extends Component {
   /**
    * Handlles swiper carousel index reset
    */
-  handleReset = () => {
-    this.swiper.slideTo(slideData.length - 1, 500)
+  handleSlide = (slideNumber) => {
+    this.swiper.slideTo(slideNumber, 500)
   }
 
   render() {
@@ -181,7 +189,7 @@ class Calendar extends Component {
                   becomes available ~24hrs after airtime. Stay tuned.
                 </p>
                 <button
-                  onClick={this.handleReset}
+                  onClick={() => this.handleSlide(slideData.length - 1)}
                   type="button"
                 >
                   <img alt="back-arrow" src={backArrow}/>
