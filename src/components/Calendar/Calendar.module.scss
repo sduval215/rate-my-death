@@ -41,7 +41,6 @@
 
 .indexCalendar {
   .indexCalendarContent {
-    margin: 30px;
     background: #FFFFFF;
     border: 6px solid #FFFFFF;
     @extend .flex;
@@ -105,10 +104,6 @@
 
 .dragging {
   cursor: grabbing !important;
-}
-
-.calendarContent, .indexCalendarContent {
-  margin: 10px !important;
 }
 
 .calendarContent {
@@ -198,17 +193,14 @@
   }
 }
 
-// .activeSlide {
-//   width: 90% !important;
-// }
+.indexCalendarContent, .calendarContent {
+  width: 100%;
+  margin: 40px 10px; 
+}
 
 .prevSlide {
   margin-left: 2.3%;
 }
-
-// .nextSlide {
-//   // width: 100% !important;
-// }
 
 .swiperContainer {
   z-index: 1000;
@@ -278,10 +270,14 @@
   }
 }
 
-@media (max-width: 1900px) {
+@media (max-width: 2300px) {
   .calendarContent, .indexCalendarContent {
+    border-width: 5px;
     .header {
       div {
+        border-width: 5px;
+        top: -4px;
+        left: 4px;
         p {
           font-size: 20px;
           line-height: 28px;
@@ -293,9 +289,17 @@
         }
       }
     }
-    .body, .indexBody {
+    .body {
       p {
-        width: 75%;
+        width: 650px;
+        font-size: 26px;
+        line-height: 30px;
+      }
+    }
+    .indexBody {
+      > p:first-of-type {
+        margin-top: 75px;
+        width: 650px;
         font-size: 26px;
         line-height: 30px;
       }
