@@ -13,17 +13,17 @@ const mailIcon = require('./imgs/icons/mail-icon.png');
 const hospitalIcon = require('./imgs/icons/hospital-icon.png');
 
 const renderResourceItem = (icon, label, route) => (
-  <div className={styles.listItem}>
-    <div className={styles.icon}>
-      <img alt="resource" src={icon}/>
-    </div>
-    <div className={styles.link}>
-      <p>{label}</p>
-      <a target="__blank" href={route}>
+  <a target="__blank" href={route}>
+    <div className={styles.listItem}>
+      <div className={styles.icon}>
+        <img alt="resource" src={icon}/>
+      </div>
+      <div className={styles.link}>
+        <p>{label}</p>
         <img alt="link" src={link} />
-      </a>
+      </div>
     </div>
-  </div>
+  </a>
 )
 
 const Resources = () => (
