@@ -1,5 +1,9 @@
 @import "../../App.scss";
 
+a {
+  text-decoration: none;
+}
+
 .resourcesContainer {
   background: linear-gradient(180deg, #E95656 0%, #E95656 100%);
   margin-top: 85px;
@@ -40,9 +44,6 @@
           font-size: 16px;
           line-height: 20px;
           color: #000000;
-        }
-        a {
-          cursor: pointer;
         }
       }
     }
@@ -91,11 +92,9 @@
             font-size: 12px;
             line-height: 14px;
           }
-          a {
-            img {
-              height: 10px;
-              margin-left: 20px;
-            }
+          img {
+            height: 10px;
+            margin-left: 20px;
           }
         }
       }
