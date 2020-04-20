@@ -434,6 +434,7 @@
   }
   /* SHARE FOOTER STYLES */
   .shareFooter {
+    padding-top: 0;
     p {
       margin: 20px auto;
       width: 85%;
@@ -448,6 +449,10 @@
 }
 
 @media (max-width: 400px) {
+  .slideButton {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
   /* SHARED CALENDAR CONTENT */
   .indexCalendarContent, .calendarContent {
     margin: 2px !important;
@@ -459,7 +464,7 @@
         height: 1px !important;
       }
       p {
-        font-size: 18px !important;
+        font-size: 16px !important;
       }
     }
     .indexFooter {
