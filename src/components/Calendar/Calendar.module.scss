@@ -139,17 +139,13 @@
   .footer {
     @extend .front;
     text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 25px 0;
     p {
       font-family: 'Graphik Regular';
       font-size: 20px;
       line-height: 22px;
       color: rgba(255, 255, 255, 0.65);
-    }
-    p:first-of-type {
-      margin-top: 25px;
-    }
-    p:last-of-type {
-      margin-bottom: 20px;
     }
     h3 {
       @extend .drukWideRegular;
@@ -160,7 +156,7 @@
     button {
       @extend .flex, .drukWideRegular;
       margin: 0 auto;
-      margin-bottom: 30px;
+      margin-top: 20px;
       padding: 10px 15px;
       align-items: center;
       background: #E95656;
@@ -229,8 +225,9 @@
 
 .shareFooter {
   z-index: 1;
+  padding: 25px 0;
   p {
-    margin: 35px auto 25px;
+    margin: 0 auto;
     width: 550px;
     font-family: 'Graphik Regular';
     font-size: 12px;
@@ -243,7 +240,7 @@
     button {
       @extend .flex, .drukWideRegular;
       margin: 0 auto;
-      margin-bottom: 30px;
+      margin-top: 25px;
       padding: 10px 15px;
       align-items: center;
       background: #E95656;
@@ -413,11 +410,6 @@
       width: 85%;
       font-size: 11px;
       line-height: 16px;
-    }
-    a {
-      button {
-        margin-bottom: 15px;
-      }
     }
   }
 }
