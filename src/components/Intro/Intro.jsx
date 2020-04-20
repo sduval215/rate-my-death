@@ -7,7 +7,7 @@ import Video from '../../components/Video/Video';
 import styles from './Intro.module.scss';
 
 // ASSETS
-const icon = require('./imgs/icon.svg');
+const logo = require('./imgs/logo.svg');
 
 const Intro = ({ navigate }) => (
   <div className={styles.pageWrapper}>
@@ -16,8 +16,7 @@ const Intro = ({ navigate }) => (
     </div>
     <div className={styles.pageContainer}>
       <div className={styles.introContainer}>
-        <img alt="icon" src={icon} />
-        <h1>RateMyDeath.org</h1>
+        <img alt="logo" src={logo} />
         <p>
           While president Trump brags about his press conference ratings <br/>
           thousands of Americans are dying.
