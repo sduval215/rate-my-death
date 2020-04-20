@@ -434,6 +434,7 @@
   }
   /* SHARE FOOTER STYLES */
   .shareFooter {
+    padding-top: 0;
     p {
       margin: 20px auto;
       width: 85%;
@@ -459,7 +460,7 @@
         height: 1px !important;
       }
       p {
-        font-size: 18px !important;
+        font-size: 16px !important;
       }
     }
     .indexFooter {
