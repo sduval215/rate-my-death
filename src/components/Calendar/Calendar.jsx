@@ -128,8 +128,15 @@ class Calendar extends Component {
               <h3>{`${viewers} viewers`}</h3>
               <p>to President Trump</p>
               <button type="button">
-                <img alt="twitter" src={twitterIcon}/>
-                TWEET THIS
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                // FORMATTED TWITTER INTENT LINK
+                href={`https://twitter.com/intent/tweet?text=If you died of %23COVID19 on ${month} ${day}, your life was worth ${viewers} viewers to @realdonaldtrump ☠️📺RateMyDeath.org`}
+              >
+                  <img alt="twitter" src={twitterIcon}/>
+                  TWEET THIS
+                </a>
               </button>
             </div>
           )
