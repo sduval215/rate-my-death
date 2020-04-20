@@ -37,7 +37,7 @@ const Resources = () => (
       {renderResourceItem(hospitalIcon, 'Send Food to a Hospital', 'https://www.gofundme.com/f/help-us-send-dinner-to-healthcare-heroes-in-nyc')}
       {renderResourceItem(bloodIcon, 'Donate to the Red Cross', 'https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/coronavirus-safety.html')}
       {renderResourceItem(mailIcon, 'Save the Postal Service', 'https://store.usps.com/store/home')}
-      {renderResourceItem(businessIcon, 'Support local businesses', '')}
+      {renderResourceItem(businessIcon, 'Support local businesses', 'https://www.searchenginejournal.com/help-small-businesses-impacted-by-covid-19/360648/')}
     </div>
   </div>
 )
