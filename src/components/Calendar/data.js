@@ -127,13 +127,13 @@ const slideData = [
       `,
     videoID: 1
    },
-  {
+   {
     month: "Apr",
     day: 9,
     viewers: "4,607",
     body: `
       <p>
-        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">1901</a> Americans die of COVID-19 and only <a href="https://www.adweek.com/tvnewser/thursday-april-9-scoreboard-outside-of-the-task-force-briefing-the-five-was-no-1-show-on-cable-news/436929/" target="_blank">8.7mm</a> people watch the White House press briefing, but Trump again <a href="https://twitter.com/realDonaldTrump/status/1248333612212195328?s=20" target="_blank">brags about his ratings</a> on Twitter.
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">1901</a> Americans die of COVID-19 and <a href="https://www.adweek.com/tvnewser/thursday-april-9-scoreboard-outside-of-the-task-force-briefing-the-five-was-no-1-show-on-cable-news/436929/" target="_blank">8.7mm</a> people watch the White House press briefing as Trump again <a href="https://twitter.com/realDonaldTrump/status/1248333612212195328?s=20" target="_blank">brags about his ratings</a> on Twitter.
       </p>
       `,
     videoID: 2
@@ -204,7 +204,7 @@ const slideData = [
       `,
     videoID: 4,
    },
-  {
+   {
     month: "Apr",
     day: 16,
     viewers: "4,779",
@@ -213,8 +213,42 @@ const slideData = [
         <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">2174</a> Americans die of COVID-19 and <a href="https://www.adweek.com/tvnewser/thursday-april-16-scoreboard-fox-news-coverage-of-the-coronavirus-task-force-briefing-averaged-6-4-million-viewers-in-the-6-p-m-hour/437690/" target="_blank">10.4mm</a> people tune into the White House press briefing.
       </p>
       `,
-    videoID: 3
+    videoID: 5
    },
+  {
+    month: "Apr",
+    day: 17,
+    viewers: "3,504",
+    body: `
+      <p>
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">2528</a> Americans die of COVID-19 and <a href="https://www.adweek.com/tvnewser/friday-april-17-scoreboard-tucker-carlson-was-no-1-in-prime-time-averaging-4-8-million-viewers/437788/" target="_blank">8.8mm</a> watch the White House press briefing as Trump encourages <a href="https://twitter.com/realDonaldTrump/status/1251168994066944003?s=20" target="_blank">dangerous</a> <a href="https://twitter.com/realDonaldTrump/status/1251169217531056130?s=20" target="_blank">ill-advised</a> <a href="https://twitter.com/realDonaldTrump/status/1251169987110330372?s=20" target="_blank">protests</a> on Twitter.
+      </p>
+      `,
+    videoID: 6
+   },
+  {
+    month: "Apr",
+    day: 18,
+    viewers: "2,995",
+    body: `
+      <p>
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">1867</a> more Americans die of COVID-19 as <a href="https://www.adweek.com/tvnewser/saturday-april-18-scoreboard-jesse-watters-was-most-watched-while-greg-gutfeld-was-no-1-in-adults-25-54/437806/" target="_blank">5.6mm</a> watch the White House press briefing.
+      </p>
+      `,
+    videoID: 5
+   },
+  {
+    month: "Apr",
+    day: 19,
+    viewers: "4,661",
+    body: `
+      <p>
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">1561</a> Americans die of COVID-19 and total US deaths top 40,000 as <a href="https://www.adweek.com/tvnewser/sunday-april-19-scoreboard-fox-news-remained-no-1-for-covid-19-briefing-coverage-and-cnn-was-no-1-in-the-prime-time-demo/437808/" target="_blank">7.2mm</a> watch the White House press briefing.
+      </p>
+      `,
+    videoID: 4
+   },
+   
 ]
 
 export {
