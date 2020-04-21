@@ -50,7 +50,7 @@
       @extend .flex;
       align-items: center;
       img {
-        margin-top: 0px;
+        // margin-top: 10px;
         margin-left: 10px;
         height: 25px;
       }
@@ -72,6 +72,7 @@
         width: 70%;
         margin: 0 auto;
         a {
+          text-decoration: underline;
           font-family: 'Graphik Medium';
           color: #E95656;
         }
