@@ -20,9 +20,9 @@ const logo = require('./imgs/logo.svg');
 
 // SHARE COPY OPTIONS
 const shareCopy = [
-  'We’re literally dying for attention @realdonaldtrump: ☠️📺RateMyDeath.org/ %23COVID19',
-  'We die, @realdonaldtrump brags. How many lives are his ratings worth? ☠️📺RateMyDeath.org/ %23COVID19',
-  'There’s blood on @realdonaldtrump’s ratings: ☠️📺RateMyDeath.org/ %23COVID19'
+  'We’re literally dying for attention @realdonaldtrump: ☠️📺https://www.ratemydeath.org/ %23COVID19',
+  'We die, @realdonaldtrump brags. How many lives are his ratings worth? ☠️📺https://www.ratemydeath.org/ %23COVID19',
+  'There’s blood on @realdonaldtrump’s ratings: ☠️📺https://www.ratemydeath.org/ %23COVID19'
 ]
 
 class Calendar extends Component {
@@ -146,7 +146,7 @@ class Calendar extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
                 // FORMATTED TWITTER INTENT LINK
-                href={`https://twitter.com/intent/tweet?text=If you died of %23COVID19 on ${month} ${day}, your life was worth ${viewers} viewers to @realdonaldtrump ☠️📺RateMyDeath.org/`}
+                href={`https://twitter.com/intent/tweet?text=If you died of %23COVID19 on ${month} ${day}, your life was worth ${viewers} viewers to @realdonaldtrump ☠️📺https://www.ratemydeath.org/`}
               >
                   <img alt="twitter" src={twitterIcon}/>
                   TWEET THIS
