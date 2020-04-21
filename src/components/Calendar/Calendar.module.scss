@@ -210,6 +210,7 @@
 
 /* ACTION ARROWS */
 .actionArrow {
+  cursor: pointer;
   z-index: 100;
   position: absolute;
   top: 50%;
@@ -341,7 +342,7 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   /* SHARED */
   .slideButton {
     width: auto;
@@ -362,19 +363,22 @@
   /* SHARED CALENDAR CONTENT */
   .indexCalendarContent, .calendarContent {
     margin: 5px !important;
+    .footer {
+      p:last-of-type, p:first-of-type {
+        margin: 0 !important;
+      }
+    }
   }
 
   .calendar {
     height: 78vh;
   }
 
-  #leftArrow {
-    left: 5px;
+  /* ACTION ARROWS */
+  .actionArrow {
+    display: none;
   }
-  
-  #rightArrow {
-    right: 5px;
-  }
+
 
   /* INDEX SLIDE STYLES */
   .indexCalendarContent {

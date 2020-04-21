@@ -74,6 +74,8 @@
   align-items: center;
   height: 10vh;
   img {
+    position: relative;
+    top: -5px;
     margin: 5px 0;
     height: 10px;
   }
