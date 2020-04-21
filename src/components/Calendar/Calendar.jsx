@@ -16,6 +16,7 @@ const indexIcon = require('./imgs/index-icon.svg');
 const icon = require('./imgs/icon.svg');
 const twitterIcon = require('../../static/imgs/twitter-icon.svg');
 const backArrow = require('./imgs/back-arrow.svg');
+const actionArrow = require('./imgs/action-arrow.svg');
 const logo = require('./imgs/logo.svg');
 
 // SHARE COPY OPTIONS
@@ -172,12 +173,14 @@ class Calendar extends Component {
     return(
       <div className={styles.calendarWrapper}>
         <div className={styles.calendarContainer}>
+          <img alt="action-arrow" src={actionArrow} id={styles.leftArrow} className={styles.actionArrow} />
+          <img alt="action-arrow" src={actionArrow} id={styles.rightArrow} className={styles.actionArrow} />
           <Swiper
             getSwiper={this.setSwiperListener}
             allowTouchMove
             slide
             keyboard
-            slidesPerView={1.05}
+            slidesPerView={1.08}
             activeSlide={slideIndex}
             initialSlide={slideIndex}
             slideNextClass={styles.nextSlide}

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import styles from './Statement.module.scss';
 
 const country = require('./imgs/country.svg');
-const scrollGIF = require('./imgs/scroll-down.gif');
+const scrollDown = require('./imgs/scroll-down.svg');
 
 class Statement extends Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class Statement extends Component {
     return(
       <div className={styles.statementContainer}>
         <div className={styles.scrollContainer}>
-          <img alt="scroll-down" src={scrollGIF}/>
+          <img alt="scroll-down" src={scrollDown}/>
         </div>
         <div className={styles.heroContainer}>
           <img alt="country" src={country} />
