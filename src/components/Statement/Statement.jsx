@@ -23,7 +23,7 @@ class Statement extends Component {
           <img alt="country" src={country} />
           <div>
             <p>US COVID-19 DEATHS</p>
-            <h3>34,934</h3>
+            <h3>43,558</h3>
           </div>
         </div>
         <div className={styles.copyContainer}>
