@@ -55,7 +55,7 @@ class Calendar extends Component {
     if(swiper !== null) {
       // handles listeners for cursor UI updates
       swiper.on('sliderMove', () => {
-        this.setState({ slideIndex: swiper.activeIndex, dragging: true })
+        this.setState({ slideIndex: swiper.activeIndex, dragging: true });
       });
       swiper.on('touchEnd', () => {
         this.setState({ dragging: false})
@@ -173,8 +173,10 @@ class Calendar extends Component {
     return(
       <div className={styles.calendarWrapper}>
         <div className={styles.calendarContainer}>
-          <img alt="action-arrow" src={actionArrow} id={styles.leftArrow} className={styles.actionArrow} />
-          <img alt="action-arrow" src={actionArrow} id={styles.rightArrow} className={styles.actionArrow} />
+          <img onClick={() => this.swiper.slidePrev(500)} alt="action-arrow" src={actionArrow} id={styles.leftArrow} className={styles.actionArrow} />
+          {slideIndex <= slideData.length - 2 ? 
+            <img onClick={() => this.swiper.slideNext(500)} alt="action-arrow" src={actionArrow} id={styles.rightArrow} className={styles.actionArrow} /> : null
+          }
           <Swiper
             getSwiper={this.setSwiperListener}
             allowTouchMove
