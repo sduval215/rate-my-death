@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import styles from './Statement.module.scss';
 
 const country = require('./imgs/country.svg');
+const scrollGIF = require('./imgs/scroll-down.gif');
 
 class Statement extends Component {
   constructor(props) {
@@ -12,22 +13,12 @@ class Statement extends Component {
     }
   }
 
-
-  componentDidMount() {
-    fetch('https://api.thevirustracker.com/free-api?countryTimeline=US')
-      .then(response => response.json())
-      .then(({ timelineitems}) => console.log(timelineitems[0][this.returnDateFormat()]))
-  }
-
-  returnDateFormat = () => {
-    const date = new Date();
-    console.log(`${date.getMonth()}/${date.getDate}/20`)
-    return `${date.getMonth()}/${date.getDate()}/20`
-  }
-
   render() {
     return(
       <div className={styles.statementContainer}>
+        <div className={styles.scrollContainer}>
+          <img alt="scroll-down" src={scrollGIF}/>
+        </div>
         <div className={styles.heroContainer}>
           <img alt="country" src={country} />
           <div>
