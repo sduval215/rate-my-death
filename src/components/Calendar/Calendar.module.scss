@@ -484,10 +484,13 @@
   color: rgba(0, 0, 0, 0.65) !important;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 415px) {
   .slideButton {
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    p {
+      font-size: 10px !important;
+    }
   }
   /* SHARED CALENDAR CONTENT */
   .indexCalendarContent, .calendarContent {

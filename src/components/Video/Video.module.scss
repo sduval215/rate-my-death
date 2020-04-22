@@ -36,14 +36,20 @@ video {
   background-color: rgba(0,0,0,0.6)
 }
 
+@media (max-width: 850px) {
+  video {
+    left: -60%;
+  }
+}
+
 @media (max-width: 500px) {
   video {
-    left: -450px;
+    left: -95%;
   }
 }
 
 @media (max-width: 400px) {
   video {
-    top: 0px;
+    left: -135%;
   }
 }
