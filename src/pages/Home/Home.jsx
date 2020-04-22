@@ -27,7 +27,7 @@ class Home extends Component {
         ): (
           <div className={styles.pageContainer}>
             {/* CALENDAR */}
-            <Calendar />
+            {/* <Calendar /> */}
             {/* STATEMENT */}
             <Statement />
             {/* RESOURCES */}
