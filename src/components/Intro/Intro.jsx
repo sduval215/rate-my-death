@@ -18,7 +18,7 @@ const Intro = ({ navigate }) => (
       <div className={styles.introContainer}>
         <img alt="logo" src={logo} />
         <p>
-          While President Trump brags about his press conference ratings <br/>
+          While President Trump brags about his press conference ratings, <br/>
           thousands of Americans are dying.
         </p>
         <p>
