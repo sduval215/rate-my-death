@@ -48,23 +48,24 @@ class Calendar extends Component {
    * @param {Class} swiper
    */
   setSwiperListener = (swiper) => {
-    // set global swiper class reference for future use
-    this.swiper = swiper;
-    // animate
-    if(swiper !== null) {
-      // introduction animation
-      setTimeout(() => swiper.slideTo(slideData.length - 1, 1500), 1000);
-      // handles listeners for cursor UI updatess
-      swiper.on('sliderMove', () => {
-        this.setState({ slideIndex: swiper.activeIndex, dragging: true });
-      });
-      swiper.on('touchEnd', () => {
-        this.setState({ dragging: false})
-      });
-      swiper.on('slideChange', () => {
-        this.setState({ slideIndex: swiper.activeIndex})
-      })
-    }
+    setTimeout(() => {
+      // set global swiper class reference for future use
+      this.swiper = swiper;
+      if(swiper) {
+        // animate
+        swiper.slideTo(slideData.length - 1, 1000);
+        // handles listeners for cursor UI updatess
+        swiper.on('sliderMove', () => {
+          this.setState({ slideIndex: swiper.activeIndex, dragging: true });
+        });
+        swiper.on('touchEnd', () => {
+          this.setState({ dragging: false})
+        });
+        swiper.on('slideChange', () => {
+          this.setState({ slideIndex: swiper.activeIndex})
+        })
+      }
+    }, 1250);
   }
 
   renderShareSection = (isIndex) => (
