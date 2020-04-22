@@ -120,7 +120,16 @@
       }
     }
   }
-  
+}
+
+@media (max-width: 450px) {
+  /* SCROLL STYLES */
+
+.scrollContainer {
+  img {
+    top: 5px;
+  }
+}
 }
 
 /* MOBILE LANDSCAPE STYLES */
