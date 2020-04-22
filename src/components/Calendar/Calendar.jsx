@@ -30,7 +30,7 @@ class Calendar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      slideIndex: 1,
+      slideIndex: slideData.length - 5,
       calendarHeight: window.innerHeight * 0.94
     }
     this.swiper = null;
@@ -52,9 +52,9 @@ class Calendar extends Component {
     this.swiper = swiper;
     // animate
     setTimeout(() => swiper.slideTo(slideData.length - 1, 2000), 500);
-    setTimeout(() => this.setState({ slideIndex: slideData.length - 1 }), 2500);
+    // setTimeout(() => this.setState({ slideIndex: slideData.length - 1 }), 2500);
     if(swiper !== null) {
-      // handles listeners for cursor UI updates
+      // handles listeners for cursor UI updatess
       swiper.on('sliderMove', () => {
         this.setState({ slideIndex: swiper.activeIndex, dragging: true });
       });
