@@ -30,7 +30,7 @@ class Calendar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      slideIndex: slideData.length - 5,
+      slideIndex: slideData.length - 2,
       calendarHeight: window.innerHeight * 0.94
     }
     this.swiper = null;
@@ -183,7 +183,6 @@ class Calendar extends Component {
 
   componentDidMount() {
     this.handleHeightListener();
-    window.addEventListener('resize', this.handleHeightListener)
   }
 
 
