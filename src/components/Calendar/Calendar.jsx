@@ -30,7 +30,8 @@ class Calendar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      slideIndex: 1
+      slideIndex: 1,
+      calendarHeight: window.innerHeight * 0.9
     }
     this.swiper = null;
   }
@@ -89,7 +90,10 @@ class Calendar extends Component {
    * Renders the index slide
    */
   renderIndexSlide = () => (
-    <div className={[ styles.calendar, styles.indexCalendar ].join(' ')}>
+    <div
+      style={{ height: this.state.calendarHeight }}
+      className={[ styles.calendar, styles.indexCalendar ].join(' ')}
+    >
       <div className={styles.indexCalendarContent}>
         <div className={styles.indexHeader}>
           <img alt="index-icon" src={indexIcon}/>
@@ -168,15 +172,36 @@ class Calendar extends Component {
     this.swiper.slideTo(slideNumber, 500)
   }
 
+  /**
+   * Handles calendar height logic based 
+   * on window width resolutiono
+   */
+  handleHeightListener = () => {
+    const multiplier = window.innerHeight <= 800 ? 0.79 : 0.9;
+    this.setState({ calendarHeight: window.innerHeight *  multiplier});
+  }
+
+  componentDidMount() {
+    this.handleHeightListener();
+    window.addEventListener('resize', this.handleHeightListener)
+  }
+
+
   render() {
-    const { dragging, slideIndex } = this.state;
+    const { dragging, slideIndex, calendarHeight } = this.state;
     return(
       <div className={styles.calendarWrapper}>
         <div className={styles.calendarContainer}>
-          <img onClick={() => this.swiper.slidePrev(500)} alt="action-arrow" src={actionArrow} id={styles.leftArrow} className={styles.actionArrow} />
+          {/* CALENDAR CONTROLS */}
+          <div onClick={() => this.swiper.slidePrev(500)} id={styles.leftArrow}className={styles.actionContainer}>
+            <img alt="action-arrow" src={actionArrow} className={styles.actionArrow} />
+          </div>
           {slideIndex <= slideData.length - 2 ? 
-            <img onClick={() => this.swiper.slideNext(500)} alt="action-arrow" src={actionArrow} id={styles.rightArrow} className={styles.actionArrow} /> : null
+            <div onClick={() => this.swiper.slideNext(500)} id={styles.rightArrow} className={styles.actionContainer}>
+              <img alt="action-arrow" src={actionArrow} className={styles.actionArrow} />
+            </div> : null
           }
+          {/* MAIN CALENDAR */}
           <Swiper
             getSwiper={this.setSwiperListener}
             allowTouchMove
@@ -196,6 +221,7 @@ class Calendar extends Component {
               return(
                 <div
                   key={index}
+                  style={{ height: calendarHeight }}
                   className={[
                     styles.calendar,
                     dragging ? styles.dragging : null
@@ -206,10 +232,13 @@ class Calendar extends Component {
               )
             })}
             {/* END SLIDE */}
-            <div className={[
-              styles.endSlide,
-              dragging ? styles.dragging : null
-            ].join(' ')}>
+            <div
+              style={{ height: calendarHeight }}
+              className={[
+                styles.endSlide,
+                dragging ? styles.dragging : null
+              ].join(' ')}
+            >
               <div className={styles.contentContainer}>
                 <img alt="logo" src={logo} />
                 <p>

@@ -3,7 +3,8 @@
 /* SHARED STYLES */
 .slideButton {
   @extend .flex;
-  margin: 52px auto;
+  margin: 0 auto;
+  margin-top: 52px;
   align-items: center;
   border: 2px solid #000;
   background: #FFFFFF;
@@ -101,7 +102,7 @@
   cursor: grab;
   box-sizing: border-box;
   display: flex;
-  height: 90vh;
+  min-height: 500px;
 }
 
 .dragging {
@@ -209,20 +210,24 @@
 }
 
 /* ACTION ARROWS */
-.actionArrow {
+.actionContainer {
+  @extend .flex;
   cursor: pointer;
   z-index: 100;
   position: absolute;
-  top: 50%;
+  top: 0;
+  width: 30px;
+  justify-content: center;
+  height: 100%;
 }
 
 #leftArrow {
   transform: rotate(180deg);
-  left: 15px;
+  left: 0;
 }
 
 #rightArrow {
-  right: 15px;
+  right: 0;
 }
 
 .swiperContainer {
@@ -368,10 +373,6 @@
         margin: 0 !important;
       }
     }
-  }
-
-  .calendar {
-    height: 78vh;
   }
 
   /* ACTION ARROWS */

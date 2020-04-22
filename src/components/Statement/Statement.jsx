@@ -23,13 +23,13 @@ class Statement extends Component {
           <img alt="country" src={country} />
           <div>
             <p>US COVID-19 DEATHS</p>
-            <h3>43,558</h3>
+            <h3>45,343</h3>
           </div>
         </div>
         <div className={styles.copyContainer}>
           <h4>It didn't have to be like this.</h4>
           <p>
-            We didn’t have to sacrifice tens of thousands of American lives to this “pandemic no one saw coming.” Don’t let them tell you otherwise. There’s documented evidence President Trump knew how deadly Coronavirus would be as early as January 29th,<span>1</span>
+            We didn’t have to sacrifice tens of thousands of American lives to this "pandemic no one saw coming." Don’t let them tell you otherwise. There’s documented evidence President Trump knew how deadly Coronavirus would be as early as January 29th,<span>1</span>
             and he still sat on his hands for the whole month of February.
           </p>
           <p>
