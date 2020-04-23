@@ -31,7 +31,7 @@ class Calendar extends Component {
     super(props);
     this.state = {
       slideIndex: slideData.length - 1,
-      calendarHeight: window.innerHeight * 0.94
+      calendarHeight: window.innerHeight * 0.95
     }
     this.swiper = null;
   }
@@ -170,18 +170,18 @@ class Calendar extends Component {
     this.swiper.slideTo(slideNumber, 500)
   }
 
-  /**
-   * Handles calendar height logic based 
-   * on window width resolutiono
-   */
-  handleHeightListener = () => {
-    const multiplier = window.innerWidth <= 800 ? 0.79 : 0.94;
-    this.setState({ calendarHeight: window.innerHeight *  multiplier});
-  }
+  // /**
+  //  * Handles calendar height logic based 
+  //  * on window width resolutiono
+  //  */
+  // handleHeightListener = () => {
+  //   const multiplier = window.innerWidth <= 800 ? 0.79 : 0.94;
+  //   this.setState({ calendarHeight: window.innerHeight *  multiplier});
+  // }
 
-  componentDidMount() {
-    this.handleHeightListener();
-  }
+  // componentDidMount() {
+  //   this.handleHeightListener();
+  // }
 
 
   render() {
