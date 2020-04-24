@@ -13,6 +13,7 @@ import { slideData } from './data';
 import styles from './Calendar.module.scss';
 
 const indexIcon = require('./imgs/index-icon.svg');
+const dragIcon = require('./imgs/drag-icon.svg');
 const icon = require('./imgs/icon.svg');
 const twitterIcon = require('../../static/imgs/twitter-icon.svg');
 const backArrow = require('./imgs/back-arrow.svg');
@@ -30,6 +31,7 @@ class Calendar extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      showModal: true,
       slideIndex: slideData.length - 1,
       calendarHeight: window.innerHeight * 0.95
     }
@@ -163,32 +165,80 @@ class Calendar extends Component {
     )
   }
 
+  renderEndSlide = () => {
+    const { calendarHeight, dragging } = this.state;
+    return(
+      <div
+        style={{ height: calendarHeight }}
+        className={[
+          styles.endSlide,
+          dragging ? styles.dragging : null
+        ].join(' ')}
+      >
+        <div className={styles.contentContainer}>
+          <img alt="logo" src={logo} />
+          <p>
+            Accurate ratings data for the White House press briefings
+            becomes available ~24hrs after airtime. Stay tuned.
+          </p>
+          <button
+            onClick={() => this.handleSlide(slideData.length - 1)}
+            type="button"
+          >
+            <img alt="back-arrow" src={backArrow}/>
+            <p>GO BACK</p>
+          </button>
+        </div>
+      </div>
+    )
+  }
+
+  renderInstructionsModal = () => (
+    <div className={styles.modalWrapper}>
+      <div className={styles.modalContainer}>
+        <div className={styles.modalTop}>
+          <h3>HOW IT WORKS</h3>
+          <div className={styles.equationContainer}>
+            <div>
+              <p># of Daily Viewers</p>
+              <div />
+              <p># of Daily Deaths</p>
+            </div>
+            <span>=</span>
+            <p>
+              What 1 life is
+              <br/>
+              worth to Trump
+            </p>
+          </div>
+        </div>
+        <div className={styles.modalBottom}>
+          <p>Swipe or click left/right to explore the calendar.</p>
+          <img alt="drag-instructions" src={dragIcon}/>
+          <button
+            onClick={() => this.setState({ showModal: false })}
+            type="button">
+            <p>GOT IT</p>
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+
   /**
-   * Handlles swiper carousel index reset
+   * Handles swiper carousel index reset
    */
   handleSlide = (slideNumber) => {
     this.swiper.slideTo(slideNumber, 500)
   }
 
-  // /**
-  //  * Handles calendar height logic based 
-  //  * on window width resolutiono
-  //  */
-  // handleHeightListener = () => {
-  //   const multiplier = window.innerWidth <= 800 ? 0.79 : 0.94;
-  //   this.setState({ calendarHeight: window.innerHeight *  multiplier});
-  // }
-
-  // componentDidMount() {
-  //   this.handleHeightListener();
-  // }
-
-
   render() {
-    const { dragging, slideIndex, calendarHeight } = this.state;
+    const { dragging, slideIndex, calendarHeight, showModal } = this.state;
     return(
       <div className={styles.calendarWrapper}>
         <div className={styles.calendarContainer}>
+          {/* INSTRUCTIONS MODAL */}
+          { showModal ? this.renderInstructionsModal() : null}
           {/* CALENDAR CONTROLS */}
           <div onClick={() => this.swiper.slidePrev(500)} id={styles.leftArrow}className={styles.actionContainer}>
             <img alt="action-arrow" src={actionArrow} className={styles.actionArrow} />
@@ -228,29 +278,7 @@ class Calendar extends Component {
                 </div>
               )
             })}
-            {/* END SLIDE */}
-            <div
-              style={{ height: calendarHeight }}
-              className={[
-                styles.endSlide,
-                dragging ? styles.dragging : null
-              ].join(' ')}
-            >
-              <div className={styles.contentContainer}>
-                <img alt="logo" src={logo} />
-                <p>
-                  Accurate ratings data for the White House press briefings
-                  becomes available ~24hrs after airtime. Stay tuned.
-                </p>
-                <button
-                  onClick={() => this.handleSlide(slideData.length - 1)}
-                  type="button"
-                >
-                  <img alt="back-arrow" src={backArrow}/>
-                  <p>GO BACK</p>
-                </button>
-              </div>
-            </div>
+            {this.renderEndSlide()}
           </Swiper>
         </div>
       </div>
