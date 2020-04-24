@@ -265,10 +265,21 @@ const slideData = [
     viewers: "3,142",
     body: `
       <p>
-        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">2804</a> Americans die of COVID-19 – the highest single day total yet – as <a href="https://www.adweek.com/tvnewser/tuesday-april-21-scoreboard-tucker-carlson-remained-no-1-in-prime-time-bret-baier-hosted-his-show-from-white-house/438147/" target="_blank">8.8mm</a> watch Trump’s press conference.
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">2804</a> Americans die of COVID-19 – the highest single day total yet – as <a href="https://www.adweek.com/tvnewser/tuesday-april-21-scoreboard-tucker-carlson-remained-no-1-in-prime-time-bret-baier-hosted-his-show-from-white-house/438147/" target="_blank">8.8mm</a> watch the White House press briefing.
       </p>
       `,
       videoID: 1
+   },
+  {
+    month: "Apr",
+    day: 22,
+    viewers: "3,674",
+    body: `
+      <p>
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">2341</a> Americans die of COVID-19 as <a href="https://www.adweek.com/tvnewser/wednesday-april-22-scoreboard-tucker-carlson-hannity-ingraham-won-their-respective-timeslots-in-total-viewers-and-a25-54/438361/" target="_blank">8.6mm</a> watch Trump’s press conference.
+      </p>
+      `,
+      videoID: 2
    },
 ]
 
