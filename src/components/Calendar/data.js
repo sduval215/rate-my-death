@@ -281,6 +281,17 @@ const slideData = [
       `,
       videoID: 2
    },
+   {
+    month: "Apr",
+    day: 23,
+    viewers: "3,821",
+    body: `
+      <p>
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">2342</a> Americans die of COVID-19 and US deaths top 50k as <a href="https://www.adweek.com/tvnewser/thursday-april-23-scoreboard-tucker-carlson-sean-hannity-win-their-time-slots-in-total-viewers-and-24-54-demo/438457/" target="_blank">8.9mm</a> watch Trump suggest people ingest disinfectant.
+      </p>
+      `,
+      videoID: 6
+   },
 ]
 
 export {
