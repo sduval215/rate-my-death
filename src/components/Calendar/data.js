@@ -292,13 +292,13 @@ const slideData = [
       `,
       videoID: 6
    },
-   {
+  {
     month: "Apr",
     day: 24,
-    viewers: "0",
+    viewers: "4,292",
     body: `
       <p>
-        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">1957</a> Americans die of COVID-19 as Trump appears for 20 minutes and takes no questions.
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">1957</a> Americans die of COVID-19 as <a href="https://www.adweek.com/tvnewser/thursday-april-23-scoreboard-tucker-carlson-sean-hannity-win-their-time-slots-in-total-viewers-and-24-54-demo/438457/" target="_blank">8.4mm</a> watch Trump appear for 20 minutes and take no questions.
       </p>
       `,
       videoID: 3
@@ -309,7 +309,7 @@ const slideData = [
     viewers: "0",
     body: `
       <p>
-        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">2065</a> Americans die of COVID-19. Trump cancels the press briefing.
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">2065</a> Americans die of COVID-19 and Trump cancels the white house briefing, reportedly <a href="https://www.huffpost.com/entry/trump-press-briefings-covid-19-disinfectant-injection_n_5ea4e8b6c5b6805f9ece36a1?guccounter=1" target="_blank">losing interest</a> in them. 
       </p>
       `,
       videoID: 1
