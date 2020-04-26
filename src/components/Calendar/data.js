@@ -292,6 +292,28 @@ const slideData = [
       `,
       videoID: 6
    },
+   {
+    month: "Apr",
+    day: 24,
+    viewers: "0",
+    body: `
+      <p>
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">1957</a> Americans die of COVID-19 as Trump appears for 20 minutes and takes no questions.
+      </p>
+      `,
+      videoID: 3
+   },
+  {
+    month: "Apr",
+    day: 25,
+    viewers: "0",
+    body: `
+      <p>
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">2065</a> Americans die of COVID-19. Trump cancels the press briefing.
+      </p>
+      `,
+      videoID: 1
+   },
 ]
 
 export {
