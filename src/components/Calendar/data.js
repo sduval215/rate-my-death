@@ -303,7 +303,7 @@ const slideData = [
       `,
       videoID: 3
    },
-  {
+   {
     month: "Apr",
     day: 25,
     viewers: "0",
@@ -313,6 +313,39 @@ const slideData = [
       </p>
       `,
       videoID: 1
+   },
+  {
+    month: "Apr",
+    day: 26,
+    viewers: "0",
+    body: `
+      <p>
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">1156</a> Americans die of COVID-19. There is no White House press briefing. 
+      </p>
+      `,
+      videoID: 2
+   },
+  {
+    month: "Apr",
+    day: 27,
+    viewers: "0",
+    body: `
+      <p>
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">1384</a> more Americans die of COVID-19. There is no White House press briefing. 
+      </p>
+      `,
+      videoID: 5
+   },
+  {
+    month: "Apr",
+    day: 28,
+    viewers: "0",
+    body: `
+      <p>
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">2470</a> Americans die of COVID-19 pushing US deaths over 60k. There is no White House press briefing. 
+      </p>
+      `,
+      videoID: 6
    },
 ]
 
