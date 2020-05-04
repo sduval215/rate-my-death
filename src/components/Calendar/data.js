@@ -347,6 +347,50 @@ const slideData = [
       `,
       videoID: 6
    },
+   {
+    month: "Apr",
+    day: 29,
+    viewers: "0",
+    body: `
+      <p>
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">2390</a> Americans die of COVID-19. Once again there is no White House press briefing. 
+      </p>
+      `,
+      videoID: 4
+   },
+  {
+    month: "Apr",
+    day: 30,
+    viewers: "0",
+    body: `
+      <p>
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">2201</a> more Americans die of COVID-19. There is no acknowledgement or White House press briefing. 
+      </p>
+      `,
+      videoID: 3
+   },
+  {
+    month: "May",
+    day: 1,
+    viewers: "0",
+    body: `
+      <p>
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">1897</a> Americans die of COVID-19. There is no White House press briefing. 
+      </p>
+      `,
+      videoID: 1
+   },
+  {
+    month: "May",
+    day: 2,
+    viewers: "0",
+    body: `
+      <p>
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">1691</a> Americans die of COVID-19. Trump has not held a White House press briefing in over a week. 
+      </p>
+      `,
+      videoID: 2
+   },
 ]
 
 export {
