@@ -391,6 +391,72 @@ const slideData = [
       `,
       videoID: 2
    },
+   {
+    month: "May",
+    day: 3,
+    viewers: "0",
+    body: `
+      <p>
+        <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">1153</a> Americans die of COVID-19. There is no White House press briefing.  
+      </p>
+      `,
+      videoID: 6
+   },
+    {
+      month: "May",
+      day: 4,
+      viewers: "0",
+      body: `
+        <p>
+          <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">1324</a> Americans die of COVID-19. There is no White House press briefing as Trump is reportedly bored with the Coronavirus.  
+        </p>
+        `,
+        videoID: 5
+    },
+    {
+      month: "May",
+      day: 5,
+      viewers: "0",
+      body: `
+        <p>
+          <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">2350</a> Americans die of COVID-19. There is no White House press briefing.  
+        </p>
+        `,
+        videoID: 4
+    },
+    {
+      month: "May",
+      day: 6,
+      viewers: "0",
+      body: `
+        <p>
+          <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">2528</a> more Americans die of COVID-19. Again there is no White House press briefing.  
+        </p>
+        `,
+        videoID: 3
+    },
+    {
+      month: "May",
+      day: 7,
+      viewers: "0",
+      body: `
+        <p>
+          <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">2129</a> Americans die of COVID-19. The last White House press briefing was over two weeks ago.  
+        </p>
+        `,
+        videoID: 1
+    },
+    {
+      month: "May",
+      day: 8,
+      viewers: "0",
+      body: `
+        <p>
+          <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">1687</a> Americans die of COVID-19, and a report shows that at least <a href="https://thehill.com/homenews/administration/496910-eleven-secret-service-agents-test-positive-for-covid-19-report" target="_blank">11 of Trump’s secret service agents test positive</a>. There is no White House press briefing.  
+        </p>
+        `,
+        videoID: 2
+    },
 ]
 
 export {
