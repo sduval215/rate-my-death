@@ -457,6 +457,50 @@ const slideData = [
         `,
         videoID: 2
     },
+    {
+      month: "May",
+      day: 9,
+      viewers: "0",
+      body: `
+        <p>
+          <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">1422</a> Americans die of COVID-19. There is no White House press briefing.  
+        </p>
+        `,
+        videoID: 3
+     },
+    {
+      month: "May",
+      day: 10,
+      viewers: "0",
+      body: `
+        <p>
+          Only <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">750</a> Americans die of COVID-19, the lowest single day total since March. There is no White House press briefing.  
+        </p>
+        `,
+        videoID: 4
+     },
+    {
+      month: "May",
+      day: 11,
+      viewers: "7,795",
+      body: `
+        <p>
+          <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">1008</a> Americans die of COVID-19, as Trump holds his first White House press briefing in over 2 weeks, drawing <a href="https://www.adweek.com/tvnewser/tuesday-april-21-scoreboard-tucker-carlson-remained-no-1-in-prime-time-bret-baier-hosted-his-show-from-white-house/438147/" target="_blank">7.8mm</a> viewers.  
+        </p>
+        `,
+        videoID: 6
+     },
+    {
+      month: "May",
+      day: 12,
+      viewers: "0",
+      body: `
+        <p>
+          <a href="https://www.worldometers.info/coronavirus/country/us/" target="_blank">1630</a> Americans die of COVID-19. There is no White House press briefing.  
+        </p>
+        `,
+        videoID: 5
+     },
 ]
 
 export {
